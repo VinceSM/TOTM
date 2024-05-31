@@ -1,8 +1,8 @@
 extends KinematicBody2D
 
 export var speed = 500
-export var jump_force = -500  # Fuerza de salto para un pequeño salto
-export var gravity = 500
+#export var jump_force = -500  # Fuerza de salto para un pequeño salto
+#export var gravity = 500
 onready var _animated_sprite = $AnimatedSprite
 
 var velocity = Vector2()
@@ -14,7 +14,7 @@ func _ready():
 
 func _process(delta):
 	handle_input()
-	apply_gravity(delta)
+	#apply_gravity(delta)
 	move_player(delta)
 
 func handle_input():
@@ -38,14 +38,14 @@ func handle_input():
 		_animated_sprite.flip_v = false  # No voltear sprite verticalmente (mirar hacia abajo)
 		is_on_ceiling = false
 
-	if Input.is_action_just_pressed("ui_select"):
-		velocity.y = jump_force 
-	elif is_on_ceiling:
-		velocity.y = -jump_force  # Salto hacia abajo desde el techo
+	#if Input.is_action_just_pressed("ui_select"):
+	#	velocity.y = jump_force 
+	#elif is_on_ceiling:
+	#	velocity.y = -jump_force  # Salto hacia abajo desde el techo
 
-func apply_gravity(delta):
-	if not is_on_floor() and not is_on_ceiling:
-		velocity.y += gravity * delta
+#func apply_gravity(delta):
+	#if not is_on_floor() and not is_on_ceiling:
+		#velocity.y += gravity * delta
 
 func move_player(delta):
 	velocity = move_and_slide(velocity, Vector2.UP)

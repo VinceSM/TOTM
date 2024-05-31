@@ -35,12 +35,14 @@ margin_right = 800.0
 margin_bottom = 425.0
 
 [node name="PlayButton" type="Button" parent="VBoxContainer"]
+margin_right = 552.0
+margin_bottom = 20.0
 text = "PLAY"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
-margin_top = 100.0
-margin_right = 45.0
-margin_bottom = 120.0
+margin_top = 24.0
+margin_right = 552.0
+margin_bottom = 44.0
 text = "QUIT"
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]

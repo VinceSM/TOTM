@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://BackgroundIMG/CollisionTileSet.tres" type="TileSet" id=1]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
+
+[node name="Level1" type="Node2D"]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+collision_use_kinematic = true
+format = 1
+tile_data = PoolIntArray( 0, 1610612736, 0, 8, 1610612736, 0, 131071, -1610612736, 0, 65552, -1073741824, 0, 589824, 0, 0, 589832, 0, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 81, 557 )

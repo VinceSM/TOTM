@@ -19,7 +19,7 @@ func _adjust_buttonQ(button, left, top, width, height):
 	button.margin_bottom = top + height
 	
 func _on_PlayButton_pressed():
-	get_tree().change_scene("res://Scenes/Player.tscn")
+	get_tree().change_scene("res://Scenes/Level1.tscn")
 
 func _on_QuitButton_pressed():
 	get_tree().quit()
