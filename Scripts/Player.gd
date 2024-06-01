@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
-export var speed = 500
+export var speed = 300
+export var vertical_speed = 400
 onready var _animated_sprite = $AnimatedSprite
 
 var velocity = Vector2()
@@ -15,7 +16,7 @@ func _process(delta):
 	move_player(delta)
 
 func handle_input():
-	velocity = Vector2()  # Resetear la velocidad cada frame
+	velocity.x = 0  # Resetear la velocidad horizontal cada frame
 	
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += speed
@@ -29,15 +30,20 @@ func handle_input():
 		_animated_sprite.stop()
 
 	if Input.is_action_just_pressed("ui_up") and not is_on_ceiling:
-		position.y -= 500  # Mover hacia arriba
 		_animated_sprite.flip_v = true  # Voltear sprite verticalmente (mirar hacia arriba)
 		is_on_ceiling = true
 	elif Input.is_action_just_pressed("ui_down") and is_on_ceiling:
-		position.y += 500  # Mover hacia abajo
 		_animated_sprite.flip_v = false  # No voltear sprite verticalmente (mirar hacia abajo)
 		is_on_ceiling = false
 
 func move_player(delta):
+	if is_on_ceiling and position.y > 0:
+		velocity.y = -vertical_speed
+	elif not is_on_ceiling and position.y < screen_size.y - get_animated_sprite_height():
+		velocity.y = vertical_speed
+	else:
+		velocity.y = 0
+
 	velocity = move_and_slide(velocity, Vector2.UP)
 
 	# Asegurarse de que el jugador no salga de los límites de la pantalla horizontalmente
@@ -45,15 +51,6 @@ func move_player(delta):
 		position.x = 0
 	elif position.x > screen_size.x - get_animated_sprite_width():
 		position.x = screen_size.x - get_animated_sprite_width()
-
-	# Restringir la posición vertical del jugador cuando esté en el suelo o en el techo
-	if is_on_ceiling:
-		position.y = max(0, position.y)
-	else:
-		position.y = min(screen_size.y - get_animated_sprite_height(), position.y)
-
-func is_on_floor():
-	return not is_on_ceiling  # Verificar si el jugador está en contacto con el suelo
 
 func get_animated_sprite_width():
 	if _animated_sprite.frames:

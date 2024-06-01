@@ -35,13 +35,13 @@ margin_right = 800.0
 margin_bottom = 425.0
 
 [node name="PlayButton" type="Button" parent="VBoxContainer"]
-margin_right = 552.0
+margin_right = 250.0
 margin_bottom = 20.0
 text = "PLAY"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 margin_top = 24.0
-margin_right = 552.0
+margin_right = 250.0
 margin_bottom = 44.0
 text = "QUIT"
 
