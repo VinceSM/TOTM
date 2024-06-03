@@ -46,18 +46,6 @@ func move_player(delta):
 
 	velocity = move_and_slide(velocity, Vector2.UP)
 
-	# Asegurarse de que el jugador no salga de los límites de la pantalla horizontalmente
-	if position.x < 0:
-		position.x = 0
-	elif position.x > screen_size.x - get_animated_sprite_width():
-		position.x = screen_size.x - get_animated_sprite_width()
-
-func get_animated_sprite_width():
-	if _animated_sprite.frames:
-		var animation = _animated_sprite.frames.get_animation_names()[0]
-		return _animated_sprite.frames.get_frame(animation, 0).get_size().x
-	return 0
-
 func get_animated_sprite_height():
 	if _animated_sprite.frames:
 		var animation = _animated_sprite.frames.get_animation_names()[0]

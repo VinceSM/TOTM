@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fondoLevel1.png-668f2bc03d4da3f6cf7f36d6252bdad7.stex"
+path="res://.import/Purple_Nebula_06-512x512.png-7f65cf4b1684b804c1cb55ee76145d46.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://BackgroundIMG/fondoLevel1.png"
-dest_files=[ "res://.import/fondoLevel1.png-668f2bc03d4da3f6cf7f36d6252bdad7.stex" ]
+source_file="res://BackgroundIMG/Small 512x512/Purple Nebula/Purple_Nebula_06-512x512.png"
+dest_files=[ "res://.import/Purple_Nebula_06-512x512.png-7f65cf4b1684b804c1cb55ee76145d46.stex" ]
 
 [params]
 

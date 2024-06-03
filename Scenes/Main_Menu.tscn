@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=2]
-[ext_resource path="res://BackgroundIMG/fondoMain.png" type="Texture" id=3]
+[ext_resource path="res://BackgroundIMG/Small 512x512/Green Nebula/Green_Nebula_06-512x512.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -12,8 +12,8 @@ font_data = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="FondoMain" type="Sprite" parent="."]
-position = Vector2( 514.5, 298 )
-scale = Vector2( 1.90485, 1.5 )
+position = Vector2( 508, 298 )
+scale = Vector2( 2.15234, 1.5 )
 texture = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="."]
@@ -35,13 +35,13 @@ margin_right = 800.0
 margin_bottom = 425.0
 
 [node name="PlayButton" type="Button" parent="VBoxContainer"]
-margin_right = 250.0
+margin_right = 552.0
 margin_bottom = 20.0
 text = "PLAY"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
 margin_top = 24.0
-margin_right = 250.0
+margin_right = 552.0
 margin_bottom = 44.0
 text = "QUIT"
 
