@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/totmCoin.jpg-1aa208bbd756835ffa81a9f831d37d47.stex"
+path="res://.import/totmCoin.png-3eb40fd2de6df9d97c11e0b2c8098659.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Collect/totmCoin.jpg"
-dest_files=[ "res://.import/totmCoin.jpg-1aa208bbd756835ffa81a9f831d37d47.stex" ]
+source_file="res://Collect/totmCoin.png"
+dest_files=[ "res://.import/totmCoin.png-3eb40fd2de6df9d97c11e0b2c8098659.stex" ]
 
 [params]
 

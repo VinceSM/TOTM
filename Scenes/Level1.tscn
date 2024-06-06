@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://BackgroundIMG/Small 512x512/Purple Nebula/Purple_Nebula_04-512x512.png" type="Texture" id=1]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://BackgroundIMG/block3.webp" type="Texture" id=3]
+[ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/HUD.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -32,6 +34,8 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 
 [node name="Level1" type="Node2D"]
 
+[node name="HUD" parent="." instance=ExtResource( 5 )]
+
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 507, 298 )
 scale = Vector2( 2.10547, 1.25391 )
@@ -44,3 +48,9 @@ tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -6
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 74, 559 )
+
+[node name="Coin" parent="." instance=ExtResource( 4 )]
+position = Vector2( 108, 238 )
+
+[node name="Coin2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 908, 102 )
