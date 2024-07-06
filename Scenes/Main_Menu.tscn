@@ -63,16 +63,16 @@ custom_constants/separation = 50
 
 [node name="PlayButton" type="Button" parent="VBoxContainer"]
 margin_right = 552.0
-margin_bottom = 36.0
+margin_bottom = 34.0
 custom_fonts/font = SubResource( 5 )
 custom_styles/hover = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
 text = "PLAY"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
-margin_top = 86.0
+margin_top = 84.0
 margin_right = 552.0
-margin_bottom = 120.0
+margin_bottom = 118.0
 custom_fonts/font = SubResource( 7 )
 custom_styles/hover = SubResource( 8 )
 custom_styles/normal = SubResource( 9 )

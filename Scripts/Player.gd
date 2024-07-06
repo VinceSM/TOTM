@@ -12,32 +12,32 @@ func _ready():
 	screen_size = get_viewport_rect().size
 
 func _process(delta):
-	handle_input()
-	move_player(delta)
+	move_player_x()
+	move_player_y(delta)
 
-func handle_input():
-	velocity.x = 0  # Resetear la velocidad horizontal cada frame
+func move_player_x():
+	velocity.x = 0
 	
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += speed
 		_animated_sprite.play("run")
-		_animated_sprite.flip_h = false  # Voltear sprite hacia la derecha
+		_animated_sprite.flip_h = false  
 	elif Input.is_action_pressed("ui_left"):
 		velocity.x -= speed
 		_animated_sprite.play("run")
-		_animated_sprite.flip_h = true  # Voltear sprite hacia la izquierda
+		_animated_sprite.flip_h = true  
 	else:
 		_animated_sprite.stop()
 		_animated_sprite.play("look")
 
+func move_player_y(delta):
 	if Input.is_action_just_pressed("ui_up") and not is_on_ceiling:
-		_animated_sprite.flip_v = true  # Voltear sprite verticalmente (mirar hacia arriba)
+		_animated_sprite.flip_v = true 
 		is_on_ceiling = true
 	elif Input.is_action_just_pressed("ui_down") and is_on_ceiling:
 		_animated_sprite.flip_v = false
 		is_on_ceiling = false
-
-func move_player(delta):
+	
 	if is_on_ceiling and position.y > 0:
 		velocity.y = -vertical_speed
 	elif not is_on_ceiling and position.y < screen_size.y - get_animated_sprite_height():
@@ -49,6 +49,7 @@ func move_player(delta):
 
 func avoid_player_fall(delta):
 	pass
+	# Evitar que el player se caiga de los bordes
 
 func get_animated_sprite_height():
 	if _animated_sprite.frames:
