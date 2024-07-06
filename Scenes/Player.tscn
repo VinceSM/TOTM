@@ -35,6 +35,6 @@ frames = SubResource( 1 )
 animation = "look"
 frame = 1
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["players"]]
 position = Vector2( 1, -1 )
 shape = SubResource( 2 )

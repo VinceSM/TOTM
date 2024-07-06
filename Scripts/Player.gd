@@ -15,6 +15,8 @@ func _process(delta):
 	move_player_x()
 	move_player_y(delta)
 
+#func_input(event):
+
 func move_player_x():
 	velocity.x = 0
 	
