@@ -15,8 +15,6 @@ func _process(delta):
 	move_player_x()
 	move_player_y(delta)
 
-#func_input(event):
-
 func move_player_x():
 	velocity.x = 0
 	
@@ -63,3 +61,8 @@ func add_Coin():
 	var canvasLayer = get_tree().get_root().find_node("HUD",true,false)
 	
 	canvasLayer.handleCoinCollected()
+
+func add_Portal():
+	var canvasLayer = get_tree().get_root().find_node("HUD",true,false)
+	
+	canvasLayer.handlePortalCollected()
