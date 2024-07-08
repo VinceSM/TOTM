@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Spikes.webp-964cefb7b012e856803d22aa84065c09.stex"
+path="res://.import/Spikes.webp-9749f729682129453f5976b6c3fb3d97.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Interactables/Spikes.webp"
-dest_files=[ "res://.import/Spikes.webp-964cefb7b012e856803d22aa84065c09.stex" ]
+source_file="res://Entities/Enemy/Spikes.webp"
+dest_files=[ "res://.import/Spikes.webp-9749f729682129453f5976b6c3fb3d97.stex" ]
 
 [params]
 
