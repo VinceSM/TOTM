@@ -1,0 +1,109 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://BackgroundIMG/flechas_pc2.png" type="Texture" id=2]
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.956863, 0.105882, 0.839216, 0.380392 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.435294, 0.00392157, 0.992157, 0.27451 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 1, 0.0235294, 0.0235294, 0.258824 )
+
+[node name="InfoToPlayer" type="Node"]
+
+[node name="Controls" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="Controls"]
+margin_right = 336.0
+margin_bottom = 87.0
+rect_scale = Vector2( 0.3, 0.3 )
+custom_fonts/font = SubResource( 2 )
+text = "to go left, pulse left arrow
+to go right, pulse right arrow
+to go up, pulse up arrow
+to go down, pulse down arrow"
+align = 1
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="Controls"]
+position = Vector2( 47, 38 )
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="Panel" type="Panel" parent="Controls"]
+margin_right = 101.0
+margin_bottom = 50.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="CollectPortal" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CollectPortal"]
+margin_left = 131.0
+margin_right = 365.0
+margin_bottom = 49.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 3 )
+text = "collect the portal to 
+advance to the next level"
+align = 1
+valign = 1
+
+[node name="Panel" type="Panel" parent="CollectPortal"]
+margin_left = 131.0
+margin_right = 249.0
+margin_bottom = 24.0
+custom_styles/panel = SubResource( 4 )
+
+[node name="CollectCoin" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CollectCoin"]
+margin_left = 132.0
+margin_top = 34.0
+margin_right = 366.0
+margin_bottom = 80.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 5 )
+text = "collect coins to have 
+your own record"
+align = 1
+valign = 1
+
+[node name="Panel" type="Panel" parent="CollectCoin"]
+margin_left = 132.0
+margin_top = 34.0
+margin_right = 250.0
+margin_bottom = 58.0
+custom_styles/panel = SubResource( 6 )
+
+[node name="TimeGame" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="TimeGame"]
+margin_left = 275.0
+margin_right = 509.0
+margin_bottom = 58.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/font = SubResource( 5 )
+text = "This clock indicates how 
+much time you have 
+to complete the level"
+align = 1
+valign = 1
+
+[node name="Panel" type="Panel" parent="TimeGame"]
+margin_left = 275.0
+margin_right = 393.0
+margin_bottom = 27.0
+custom_styles/panel = SubResource( 6 )
