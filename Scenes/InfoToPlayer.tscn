@@ -1,35 +1,57 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://BackgroundIMG/flechas_pc2.png" type="Texture" id=2]
+[ext_resource path="res://BackgroundIMG/Small 512x512/Starfields/Starfield_01-512x512.png" type="Texture" id=3]
+[ext_resource path="res://Collect/portal.png" type="Texture" id=4]
+[ext_resource path="res://Collect/totmCoin.png" type="Texture" id=5]
+[ext_resource path="res://Scripts/InfoToPlayer.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=6]
+size = 50
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0, 0, 0, 0 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 20
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.956863, 0.105882, 0.839216, 0.380392 )
-
 [sub_resource type="DynamicFont" id=3]
 font_data = ExtResource( 1 )
-
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.435294, 0.00392157, 0.992157, 0.27451 )
 
 [sub_resource type="DynamicFont" id=5]
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 1, 0.0235294, 0.0235294, 0.258824 )
-
 [node name="InfoToPlayer" type="Node"]
+script = ExtResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 512.5, 296 )
+scale = Vector2( 2.10742, 1.29297 )
+texture = ExtResource( 3 )
+
+[node name="MainMenuBtn" type="Button" parent="."]
+margin_left = 380.0
+margin_top = 168.0
+margin_right = 652.0
+margin_bottom = 264.0
+custom_fonts/font = SubResource( 6 )
+custom_styles/hover = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
+text = "main menu"
 
 [node name="Controls" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="Controls"]
-margin_right = 336.0
-margin_bottom = 87.0
-rect_scale = Vector2( 0.3, 0.3 )
+margin_left = 73.0
+margin_top = 316.0
+margin_right = 409.0
+margin_bottom = 403.0
 custom_fonts/font = SubResource( 2 )
 text = "to go left, pulse left arrow
 to go right, pulse right arrow
@@ -39,62 +61,56 @@ align = 1
 valign = 1
 
 [node name="Sprite" type="Sprite" parent="Controls"]
-position = Vector2( 47, 38 )
-scale = Vector2( 0.1, 0.1 )
+position = Vector2( 238, 490 )
+scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 2 )
-
-[node name="Panel" type="Panel" parent="Controls"]
-margin_right = 101.0
-margin_bottom = 50.0
-custom_styles/panel = SubResource( 1 )
 
 [node name="CollectPortal" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="CollectPortal"]
-margin_left = 131.0
-margin_right = 365.0
-margin_bottom = 49.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 55.0
+margin_top = 14.0
+margin_right = 305.0
+margin_bottom = 64.0
+rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/font = SubResource( 3 )
 text = "collect the portal to 
 advance to the next level"
 align = 1
 valign = 1
 
-[node name="Panel" type="Panel" parent="CollectPortal"]
-margin_left = 131.0
-margin_right = 249.0
-margin_bottom = 24.0
-custom_styles/panel = SubResource( 4 )
+[node name="Sprite" type="Sprite" parent="CollectPortal"]
+position = Vector2( 239, 185 )
+scale = Vector2( 0.108779, 0.111053 )
+texture = ExtResource( 4 )
 
 [node name="CollectCoin" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="CollectCoin"]
-margin_left = 132.0
-margin_top = 34.0
-margin_right = 366.0
-margin_bottom = 80.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 585.0
+margin_top = 310.0
+margin_right = 835.0
+margin_bottom = 360.0
+rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/font = SubResource( 5 )
 text = "collect coins to have 
 your own record"
 align = 1
 valign = 1
 
-[node name="Panel" type="Panel" parent="CollectCoin"]
-margin_left = 132.0
-margin_top = 34.0
-margin_right = 250.0
-margin_bottom = 58.0
-custom_styles/panel = SubResource( 6 )
+[node name="Sprite" type="Sprite" parent="CollectCoin"]
+position = Vector2( 776, 472 )
+scale = Vector2( 0.303061, 0.305 )
+texture = ExtResource( 5 )
 
 [node name="TimeGame" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="TimeGame"]
-margin_left = 275.0
-margin_right = 509.0
-margin_bottom = 58.0
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = 590.0
+margin_top = 27.0
+margin_right = 840.0
+margin_bottom = 78.0
+rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/font = SubResource( 5 )
 text = "This clock indicates how 
 much time you have 
@@ -102,8 +118,4 @@ to complete the level"
 align = 1
 valign = 1
 
-[node name="Panel" type="Panel" parent="TimeGame"]
-margin_left = 275.0
-margin_right = 393.0
-margin_bottom = 27.0
-custom_styles/panel = SubResource( 6 )
+[connection signal="pressed" from="MainMenuBtn" to="." method="_on_MainMenuBtn_pressed"]
