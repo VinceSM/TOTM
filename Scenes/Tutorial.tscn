@@ -90,6 +90,7 @@ scale = Vector2( 1, 1 )
 
 [node name="Portal" parent="." instance=ExtResource( 4 )]
 position = Vector2( 882, 553 )
+scale = Vector2( 1.2, 1 )
 
 [node name="PauseMenu" parent="." instance=ExtResource( 7 )]
 visible = false

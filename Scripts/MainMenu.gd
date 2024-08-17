@@ -11,4 +11,4 @@ func _on_QuitButton_pressed():
 
 
 func _on_HowToPlayBtn_pressed():
-	get_tree().change_scene("res://Scenes/InfoToPlayer.tscn")
+	get_tree().change_scene("res://Scenes/HowToPlay.tscn")

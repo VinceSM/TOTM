@@ -21,7 +21,7 @@ func _input(event):
 		is_on_ceiling = false
 		
 
-func _process(delta):
+func _process(_delta):
 	move_player_x()
 	move_player_y()
 
@@ -49,10 +49,6 @@ func move_player_y():
 		velocity.y = 0
 
 	velocity = move_and_slide(velocity, Vector2.UP)
-
-func avoid_player_fall():
-	pass
-	# Evitar que el player se caiga de los bordes
 
 func get_animated_sprite_height():
 	if _animated_sprite.frames:
