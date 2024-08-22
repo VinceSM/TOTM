@@ -53,6 +53,7 @@ points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
 0/z_index = 0
 
 [node name="Tutorial" type="Node2D"]
+pause_mode = 2
 
 [node name="FondoTutorial" type="Sprite" parent="."]
 position = Vector2( 551.45, 314 )
