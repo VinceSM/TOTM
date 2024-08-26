@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=2]
-[ext_resource path="res://BackgroundIMG/Small 512x512/Green Nebula/Green_Nebula_06-512x512.png" type="Texture" id=3]
+[ext_resource path="res://img/Backgrounds/Small 512x512/Green Nebula/Green_Nebula_07-512x512.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30

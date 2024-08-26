@@ -2,11 +2,11 @@
 
 [ext_resource path="res://Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/InfoToPlayer.gd" type="Script" id=2]
-[ext_resource path="res://BackgroundIMG/flechasControles.png" type="Texture" id=3]
+[ext_resource path="res://img/HowToPlay/flechasControles.png" type="Texture" id=3]
 [ext_resource path="res://Collect/portal.png" type="Texture" id=4]
 [ext_resource path="res://Collect/totmCoin.png" type="Texture" id=5]
-[ext_resource path="res://BackgroundIMG/Small 512x512/Starfields/Starfield_01-512x512.png" type="Texture" id=6]
-[ext_resource path="res://BackgroundIMG/timer.png" type="Texture" id=7]
+[ext_resource path="res://img/Backgrounds/Small 512x512/Starfields/Starfield_01-512x512.png" type="Texture" id=6]
+[ext_resource path="res://img/HowToPlay/timer.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=6]
 size = 50

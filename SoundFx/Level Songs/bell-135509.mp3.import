@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bell-135509.mp3-a65c86567d4ebf4e9a521de6f6dd1a60.mp3str"
+
+[deps]
+
+source_file="res://SoundFx/Level Songs/bell-135509.mp3"
+dest_files=[ "res://.import/bell-135509.mp3-a65c86567d4ebf4e9a521de6f6dd1a60.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

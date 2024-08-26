@@ -4,8 +4,8 @@
 [ext_resource path="res://Scenes/Coin.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Scenes/Portal.tscn" type="PackedScene" id=4]
-[ext_resource path="res://BackgroundIMG/block2.webp" type="Texture" id=5]
-[ext_resource path="res://BackgroundIMG/Small 512x512/Purple Nebula/Purple_Nebula_04-512x512.png" type="Texture" id=6]
+[ext_resource path="res://img/Backgrounds/block2.webp" type="Texture" id=5]
+[ext_resource path="res://img/Backgrounds/Small 512x512/Purple Nebula/Purple_Nebula_03-512x512.png" type="Texture" id=6]
 [ext_resource path="res://Scenes/Pause_Menu.tscn" type="PackedScene" id=7]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -90,8 +90,8 @@ position = Vector2( 788, 295 )
 scale = Vector2( 1, 1 )
 
 [node name="Portal" parent="." instance=ExtResource( 4 )]
-position = Vector2( 882, 553 )
-scale = Vector2( 1.2, 1 )
+position = Vector2( 882, 546 )
+scale = Vector2( 1.5, 1.3 )
 
 [node name="PauseMenu" parent="." instance=ExtResource( 7 )]
 visible = false
