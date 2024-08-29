@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Collect/totmCoin.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Coin.gd" type="Script" id=2]
+[ext_resource path="res://SoundFx/Coin Collected/sfx_coinCollected.mp3" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 12.8572, 25.7143 )
@@ -18,5 +19,9 @@ texture = ExtResource( 1 )
 position = Vector2( -2.72478e-06, 0 )
 scale = Vector2( 0.999999, 0.999999 )
 shape = SubResource( 1 )
+
+[node name="sfxCoinCollected" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = 1.0
 
 [connection signal="body_entered" from="." to="." method="_on_Coin_body_entered"]

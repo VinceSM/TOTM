@@ -2,11 +2,26 @@ extends CanvasLayer
 
 var coins = 0
 var portals = 0
+var time_left = 60  # Tiempo en segundos
 
 func _ready():
+	$PortalsCollectedTxt.text = String(portals)
+	$CoinsCollectedTxt.text = String(coins)
+	$TimeLeftTxt.text = String(time_left)
 	
-	$PortalsCollectedTxt.text = String (portals)
-	$CoinsCollectedTxt.text = String (coins)
+	# Iniciar un temporizador
+	$Timer.start()
+	
+func _on_Timer_timeout():
+	time_left -= 1
+	$TimeLeftTxt.text = String(time_left)
+	
+	if time_left <= 0:
+		_restart_scene()
+
+func _restart_scene():
+	var current_scene = get_tree().current_scene
+	get_tree().reload_current_scene()
 
 func handleCoinCollected():
 	print("coin collected")
@@ -17,3 +32,4 @@ func handlePortalCollected():
 	print("portal Collected")
 	portals +=1
 	$PortalsCollectedTxt.text = String (portals)
+	
