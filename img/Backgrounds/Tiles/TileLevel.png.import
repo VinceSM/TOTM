@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/block3.webp-11f483314cd66ca11679d92c8bf46215.stex"
+path="res://.import/TileLevel.png-09cec41b94022b743ec6ae9ec1aecafa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Backgrounds/block3.webp"
-dest_files=[ "res://.import/block3.webp-11f483314cd66ca11679d92c8bf46215.stex" ]
+source_file="res://img/Backgrounds/Tiles/TileLevel.png"
+dest_files=[ "res://.import/TileLevel.png-09cec41b94022b743ec6ae9ec1aecafa.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/block2.webp-22ee3f7c8035f00bd41267040a624530.stex"
+path="res://.import/block3.webp-c775ff41835b1797a44207370169d9ad.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Backgrounds/block2.webp"
-dest_files=[ "res://.import/block2.webp-22ee3f7c8035f00bd41267040a624530.stex" ]
+source_file="res://img/Backgrounds/Tiles/block3.webp"
+dest_files=[ "res://.import/block3.webp-c775ff41835b1797a44207370169d9ad.stex" ]
 
 [params]
 

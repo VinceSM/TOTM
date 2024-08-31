@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TileLevel.png-47cac5054ae14883abc1e4b106ee4cbf.stex"
+path="res://.import/Fondo_2.png-cb3507e01733fc1cf9379fa06505b4c6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://img/Backgrounds/TileLevel.png"
-dest_files=[ "res://.import/TileLevel.png-47cac5054ae14883abc1e4b106ee4cbf.stex" ]
+source_file="res://img/Backgrounds/Fondo_2.png"
+dest_files=[ "res://.import/Fondo_2.png-cb3507e01733fc1cf9379fa06505b4c6.stex" ]
 
 [params]
 
