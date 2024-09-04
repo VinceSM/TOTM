@@ -2,7 +2,7 @@ extends CanvasLayer
 
 var coins = 0
 var portals = 0
-var time_left = 60  # Tiempo en segundos
+var time_left = 40  # Tiempo en segundos
 
 func _ready():
 	$PortalsCollectedTxt.text = String(portals)
