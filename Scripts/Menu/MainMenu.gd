@@ -2,11 +2,11 @@ extends Control
 
 	
 func _on_PlayButton_pressed():
-	get_tree().change_scene("res://Scenes/Tutorial.tscn")
+	get_tree().change_scene("res://Scenes/Levels/Tutorial.tscn")
 
 func _on_QuitButton_pressed():
 	get_tree().quit()
 
 
 func _on_HowToPlayBtn_pressed():
-	get_tree().change_scene("res://Scenes/HowToPlay.tscn")
+	get_tree().change_scene("res://Scenes/Menu/HowToPlay.tscn")

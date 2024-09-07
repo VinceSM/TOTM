@@ -1,7 +1,7 @@
 [gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Scripts/MainMenu.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Menu/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://img/Backgrounds/Small 512x512/Green Nebula/Green_Nebula_07-512x512.png" type="Texture" id=3]
 
 [sub_resource type="DynamicFont" id=1]
@@ -48,8 +48,8 @@ bg_color = Color( 0.0117647, 0, 0, 0 )
 script = ExtResource( 2 )
 
 [node name="FondoMain" type="Sprite" parent="."]
-position = Vector2( 508, 298 )
-scale = Vector2( 2.15234, 1.5 )
+position = Vector2( 635, 298 )
+scale = Vector2( 2.71875, 1.5 )
 texture = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="."]
