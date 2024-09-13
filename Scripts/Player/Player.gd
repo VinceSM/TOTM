@@ -57,12 +57,12 @@ func get_animated_sprite_height():
 	return 0
 
 func add_Coin():
-	GameData.add_coin()  # Actualiza las monedas en el Singleton
+	GameData.add_coin() 
 	var canvasLayer = get_tree().get_root().find_node("HUD", true, false)
-	canvasLayer.update_display()  # Actualiza la visualización en el HUD
+	canvasLayer.update_display() 
 
 func add_Portal():
-	GameData.add_portal()  # Actualiza los portales en el Singleton
+	GameData.add_portal() 
 	var canvasLayer = get_tree().get_root().find_node("HUD", true, false)
-	canvasLayer.update_display()  # Actualiza la visualización en el HUD
+	canvasLayer.update_display()  
 

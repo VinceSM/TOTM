@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/muerteSound.mp3-3aa8f112f8e6ac2f0770bf98d76184d8.mp3str"
+
+[deps]
+
+source_file="res://SoundFx/Level Songs/muerteSound.mp3"
+dest_files=[ "res://.import/muerteSound.mp3-3aa8f112f8e6ac2f0770bf98d76184d8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

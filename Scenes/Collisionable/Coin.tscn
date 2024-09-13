@@ -25,4 +25,3 @@ stream = ExtResource( 3 )
 volume_db = 1.0
 
 [connection signal="body_entered" from="." to="." method="_on_Coin_body_entered"]
-[connection signal="finished" from="sfxCoinCollected" to="." method="_on_sfxCoinCollected_finished"]

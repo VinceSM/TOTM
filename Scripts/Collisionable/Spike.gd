@@ -6,4 +6,5 @@ func _on_Spike_body_entered(body):
 
 func _restart_game():
 	get_tree().change_scene("res://Scenes/Levels/1.tscn")
+	GameData.reset_data()
 
