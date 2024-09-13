@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/Menu/Pause_Menu.gd" type="Script" id=3]
 
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.482353, 0.482353, 0.482353, 0.764706 )
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -16,12 +18,19 @@ font_data = ExtResource( 2 )
 [node name="PauseMenu" type="Control"]
 script = ExtResource( 3 )
 
+[node name="Panel" type="Panel" parent="."]
+margin_left = 256.0
+margin_top = 142.0
+margin_right = 754.0
+margin_bottom = 357.0
+custom_styles/panel = SubResource( 3 )
+
 [node name="Pause" type="Label" parent="."]
 margin_left = 285.0
 margin_top = 175.0
 margin_right = 721.0
 margin_bottom = 253.0
-custom_colors/font_color = Color( 0.434685, 0.0412445, 0.828125, 1 )
+custom_colors/font_color = Color( 0.113725, 0.278431, 0.345098, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "GAME PAUSED"
 align = 1
@@ -33,7 +42,7 @@ margin_left = 283.0
 margin_top = 262.0
 margin_right = 723.0
 margin_bottom = 340.0
-custom_colors/font_color = Color( 0.12549, 0.027451, 0.937255, 1 )
+custom_colors/font_color = Color( 0.0313726, 0.309804, 0.184314, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "to return pulse p"
 align = 1

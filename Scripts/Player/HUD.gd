@@ -1,35 +1,31 @@
 extends CanvasLayer
 
-var coins = 0
-var portals = 0
 var time_left = 40  # Tiempo en segundos
 
 func _ready():
-	$PortalsCollectedTxt.text = String(portals)
-	$CoinsCollectedTxt.text = String(coins)
-	$TimeLeftTxt.text = String(time_left)
-	
-	# Iniciar un temporizador
+	update_display()
 	$Timer.start()
-	
+
 func _on_Timer_timeout():
 	time_left -= 1
 	$TimeLeftTxt.text = String(time_left)
 	
 	if time_left <= 0:
-		_restart_scene()
+		_restart_game()
 
-func _restart_scene():
-	var current_scene = get_tree().current_scene
-	get_tree().reload_current_scene()
+func _restart_game():
+	GameData.reset_data()  # Restablecer los datos al reiniciar
+	get_tree().change_scene("res://Scenes/Levels/1.tscn")
 
 func handleCoinCollected():
-	print("coin collected")
-	coins+=1
-	$CoinsCollectedTxt.text = String(coins)
-	
+	GameData.add_coin()  # Actualizar las monedas en el Singleton
+	update_display()
+
 func handlePortalCollected():
-	print("portal Collected")
-	portals +=1
-	$PortalsCollectedTxt.text = String (portals)
-	
+	GameData.add_portal()  # Actualizar los portales en el Singleton
+	update_display()
+
+func update_display():
+	$PortalsCollectedTxt.text = String(GameData.portals)
+	$CoinsCollectedTxt.text = String(GameData.coins)
+	$TimeLeftTxt.text = String(time_left)
