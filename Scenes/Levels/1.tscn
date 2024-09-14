@@ -47,8 +47,8 @@ script = ExtResource( 10 )
 nextLevel = 2
 
 [node name="FondoTutorial" type="Sprite" parent="."]
-position = Vector2( 617, 352 )
-scale = Vector2( 1.96296, 1.47845 )
+position = Vector2( 510.5, 297.953 )
+scale = Vector2( 1.63426, 1.27256 )
 texture = ExtResource( 7 )
 
 [node name="Warning" type="Label" parent="."]

@@ -9,7 +9,8 @@ func _on_Coin_body_entered(body):
 		set_deferred("monitoring", false)
 		set_deferred("collision_layer", 0)
 		set_deferred("collision_mask", 0)
-
+		visible=false
+		
 		yield(get_tree().create_timer(0.5), "timeout")
 		queue_free() 
 

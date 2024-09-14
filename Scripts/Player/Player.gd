@@ -8,6 +8,7 @@ var velocity = Vector2()
 var screen_size
 var is_on_ceiling = false
 var is_on_floor = false
+var is_dead = false
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -66,3 +67,9 @@ func add_Portal():
 	var canvasLayer = get_tree().get_root().find_node("HUD", true, false)
 	canvasLayer.update_display()  
 
+func die():
+	$deadSound.play()
+	$DeadTimer.start()
+
+func _on_DeadTimer_timeout():
+	get_tree().change_scene("res://Scenes/Levels/1.tscn")
