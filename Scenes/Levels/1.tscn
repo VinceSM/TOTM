@@ -75,6 +75,33 @@ align = 1
 valign = 1
 uppercase = true
 
+[node name="Spikes" type="Node2D" parent="."]
+
+[node name="Spike4" parent="Spikes" instance=ExtResource( 1 )]
+light_mask = 4
+position = Vector2( 440, 501 )
+rotation = -1.5708
+scale = Vector2( 2, 2 )
+
+[node name="Spike" parent="Spikes" instance=ExtResource( 1 )]
+position = Vector2( 596, 503 )
+rotation = 1.5708
+scale = Vector2( 2, 2 )
+
+[node name="Spike2" parent="Spikes" instance=ExtResource( 1 )]
+position = Vector2( 712, 250 )
+rotation = -3.14159
+scale = Vector2( 2, 2 )
+
+[node name="Spike3" parent="Spikes" instance=ExtResource( 1 )]
+position = Vector2( 754, 250 )
+rotation = -3.14159
+scale = Vector2( 2, 2 )
+
+[node name="Spike5" parent="Spikes" instance=ExtResource( 1 )]
+position = Vector2( 286, 325 )
+scale = Vector2( 2, 2 )
+
 [node name="Blocks" type="TileMap" parent="."]
 scale = Vector2( 0.6, 0.6 )
 tile_set = SubResource( 2 )
@@ -108,33 +135,6 @@ scale = Vector2( 1, 1 )
 [node name="Coin4" parent="Coins" instance=ExtResource( 4 )]
 position = Vector2( 777, 322 )
 scale = Vector2( 1, 1 )
-
-[node name="Spikes" type="Node2D" parent="."]
-
-[node name="Spike4" parent="Spikes" instance=ExtResource( 1 )]
-light_mask = 4
-position = Vector2( 440, 501 )
-rotation = -1.5708
-scale = Vector2( 2, 2 )
-
-[node name="Spike" parent="Spikes" instance=ExtResource( 1 )]
-position = Vector2( 596, 503 )
-rotation = 1.5708
-scale = Vector2( 2, 2 )
-
-[node name="Spike2" parent="Spikes" instance=ExtResource( 1 )]
-position = Vector2( 712, 250 )
-rotation = -3.14159
-scale = Vector2( 2, 2 )
-
-[node name="Spike3" parent="Spikes" instance=ExtResource( 1 )]
-position = Vector2( 754, 250 )
-rotation = -3.14159
-scale = Vector2( 2, 2 )
-
-[node name="Spike5" parent="Spikes" instance=ExtResource( 1 )]
-position = Vector2( 286, 325 )
-scale = Vector2( 2, 2 )
 
 [node name="Portal" parent="." instance=ExtResource( 5 )]
 position = Vector2( 876, 491 )
