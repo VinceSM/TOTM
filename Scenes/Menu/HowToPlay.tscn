@@ -1,20 +1,20 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Menu/InfoToPlayer.gd" type="Script" id=2]
 [ext_resource path="res://img/HowToPlay/flechasControles.png" type="Texture" id=3]
 [ext_resource path="res://Collect/portal.png" type="Texture" id=4]
 [ext_resource path="res://Collect/totmCoin.png" type="Texture" id=5]
-[ext_resource path="res://img/Backgrounds/Small 512x512/Starfields/Starfield_01-512x512.png" type="Texture" id=6]
+[ext_resource path="res://img/Backgrounds/PNG/Battleground3/Bright/Battleground3.png" type="Texture" id=6]
 [ext_resource path="res://img/HowToPlay/timer.png" type="Texture" id=7]
-
+[ext_resource path="res://img/HowToPlay/flechasControlesUp.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=6]
 size = 50
 font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=7]
-bg_color = Color( 0, 0, 0, 1 )
+bg_color = Color( 0.129412, 0.384314, 0.145098, 0.615686 )
 
 [sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 0, 0, 0, 0 )
@@ -33,15 +33,15 @@ font_data = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 512.5, 296 )
-scale = Vector2( 2.10742, 1.29297 )
+position = Vector2( 514.5, 305 )
+scale = Vector2( 0.545312, 0.587987 )
 texture = ExtResource( 6 )
 
 [node name="BackBtn" type="Button" parent="."]
-margin_left = 424.0
-margin_top = 216.0
-margin_right = 600.0
-margin_bottom = 312.0
+margin_left = 435.0
+margin_top = 412.0
+margin_right = 611.0
+margin_bottom = 508.0
 custom_fonts/font = SubResource( 6 )
 custom_styles/hover = SubResource( 7 )
 custom_styles/normal = SubResource( 8 )
@@ -50,22 +50,36 @@ text = "BACK"
 [node name="Controls" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="Controls"]
-margin_left = 73.0
-margin_top = 316.0
-margin_right = 409.0
-margin_bottom = 403.0
+margin_left = 70.0
+margin_top = 441.0
+margin_right = 406.0
+margin_bottom = 487.0
+rect_pivot_offset = Vector2( 119, 57 )
 custom_fonts/font = SubResource( 2 )
-text = "to go left, pulse left arrow
-to go right, pulse right arrow
-to go up, pulse up arrow
-to go down, pulse down arrow"
+text = "press to move around."
 align = 1
 valign = 1
 
 [node name="Sprite" type="Sprite" parent="Controls"]
-position = Vector2( 238, 490 )
+position = Vector2( 237, 526 )
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 3 )
+
+[node name="UpSprite" type="Sprite" parent="Controls"]
+position = Vector2( 239, 396 )
+scale = Vector2( 0.691919, 0.651515 )
+texture = ExtResource( 8 )
+
+[node name="Label2" type="Label" parent="Controls"]
+margin_left = 72.0
+margin_top = 301.0
+margin_right = 408.0
+margin_bottom = 354.0
+rect_pivot_offset = Vector2( 119, 57 )
+custom_fonts/font = SubResource( 2 )
+text = "Press to walk in ceiling"
+align = 1
+valign = 1
 
 [node name="CollectPortal" type="CanvasLayer" parent="."]
 
@@ -114,9 +128,8 @@ margin_right = 840.0
 margin_bottom = 78.0
 rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/font = SubResource( 5 )
-text = "This clock indicates how 
-much time you have 
-to complete the level"
+text = "Shows 
+your time to finish"
 align = 1
 valign = 1
 

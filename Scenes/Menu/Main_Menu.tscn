@@ -51,8 +51,8 @@ bg_color = Color( 0.447059, 0.780392, 0.0392157, 0.207843 )
 script = ExtResource( 2 )
 
 [node name="FondoMain" type="Sprite" parent="."]
-position = Vector2( 584, 294.5 )
-scale = Vector2( 0.633333, 0.613889 )
+position = Vector2( 518, 294.5 )
+scale = Vector2( 0.564583, 0.613889 )
 texture = ExtResource( 3 )
 
 [node name="Label" type="Label" parent="."]
