@@ -38,9 +38,9 @@ points = PoolVector2Array( 138, 138, 0, 138, 0, 0, 138, 0 )
 
 [node name="Level3" type="Node2D"]
 script = ExtResource( 3 )
-nextLevel = 1
+nextLevel = 4
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Background" type="Sprite" parent="."]
 position = Vector2( 518, 312 )
 scale = Vector2( 2.45261, 1.61466 )
 texture = ExtResource( 4 )
@@ -128,6 +128,36 @@ position = Vector2( 899, 17 )
 rotation = -1.5708
 scale = Vector2( 2, 2 )
 
+[node name="Spike19" parent="Spikes" instance=ExtResource( 7 )]
+position = Vector2( 430, 393 )
+rotation = 1.5708
+scale = Vector2( 2, 2 )
+
+[node name="Spike20" parent="Spikes" instance=ExtResource( 7 )]
+position = Vector2( 647, 393 )
+rotation = -1.5708
+scale = Vector2( 2, 2 )
+
+[node name="Spike21" parent="Spikes" instance=ExtResource( 7 )]
+position = Vector2( 823, 17 )
+rotation = 3.14159
+scale = Vector2( 2, 2 )
+
+[node name="Spike22" parent="Spikes" instance=ExtResource( 7 )]
+position = Vector2( 284, 19 )
+rotation = 3.14159
+scale = Vector2( 2, 2 )
+
+[node name="Spike23" parent="Spikes" instance=ExtResource( 7 )]
+position = Vector2( 244, 19 )
+rotation = -3.14159
+scale = Vector2( 2, 2 )
+
+[node name="Spike24" parent="Spikes" instance=ExtResource( 7 )]
+position = Vector2( 783, 17 )
+rotation = 3.14159
+scale = Vector2( 2, 2 )
+
 [node name="Blocks" type="TileMap" parent="."]
 scale = Vector2( 0.5, 0.5 )
 tile_set = SubResource( 2 )
@@ -145,16 +175,20 @@ position = Vector2( 514, 542 )
 [node name="Coins" type="Node2D" parent="."]
 
 [node name="Coin" parent="Coins" instance=ExtResource( 1 )]
-position = Vector2( 164, 175 )
+position = Vector2( 163, 170 )
+scale = Vector2( 1, 1 )
 
 [node name="Coin2" parent="Coins" instance=ExtResource( 1 )]
-position = Vector2( 867, 175 )
+position = Vector2( 867, 170 )
+scale = Vector2( 1, 1 )
 
 [node name="Coin3" parent="Coins" instance=ExtResource( 1 )]
-position = Vector2( 231, 367 )
+position = Vector2( 231, 362 )
+scale = Vector2( 1, 1 )
 
 [node name="Coin4" parent="Coins" instance=ExtResource( 1 )]
-position = Vector2( 800, 367 )
+position = Vector2( 802, 363 )
+scale = Vector2( 1, 1 )
 
 [node name="Portal" parent="." instance=ExtResource( 2 )]
 position = Vector2( 514, 101 )

@@ -17,6 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 GameData="*res://Scripts/GameData.gd"
+TimerController="res://Scripts/TimerController.gd"
 
 [display]
 
