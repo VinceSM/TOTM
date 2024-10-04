@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/Menu/Pause_Menu.gd" type="Script" id=3]
@@ -15,6 +15,14 @@ font_data = ExtResource( 2 )
 size = 45
 font_data = ExtResource( 2 )
 
+[sub_resource type="DynamicFont" id=4]
+size = 30
+outline_color = Color( 0.0313726, 0.4, 0.227451, 0 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.0431373, 0.603922, 0.0784314, 1 )
+
 [node name="PauseMenu" type="Control"]
 script = ExtResource( 3 )
 
@@ -22,7 +30,7 @@ script = ExtResource( 3 )
 margin_left = 256.0
 margin_top = 142.0
 margin_right = 754.0
-margin_bottom = 357.0
+margin_bottom = 455.0
 custom_styles/panel = SubResource( 3 )
 
 [node name="Pause" type="Label" parent="."]
@@ -48,3 +56,16 @@ text = "to return pulse p"
 align = 1
 valign = 1
 uppercase = true
+
+[node name="Main Menu" type="Button" parent="."]
+margin_left = 398.0
+margin_top = 370.0
+margin_right = 610.0
+margin_bottom = 419.0
+custom_colors/font_color = Color( 0.125909, 0.0283518, 0.936523, 1 )
+custom_fonts/font = SubResource( 4 )
+custom_styles/normal = SubResource( 6 )
+text = "MAIN MENU"
+icon_align = 1
+
+[connection signal="pressed" from="Main Menu" to="." method="_on_Main_Menu_pressed"]

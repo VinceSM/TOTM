@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Menu/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://img/Backgrounds/PNG/Battleground1/Bright/Battleground1.png" type="Texture" id=3]
+[ext_resource path="res://SoundFx/Level Songs/MainMenu.mp3" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -103,6 +104,9 @@ custom_styles/hover = SubResource( 11 )
 custom_styles/normal = SubResource( 12 )
 text = "how to play"
 icon_align = 1
+
+[node name="SongGame" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]

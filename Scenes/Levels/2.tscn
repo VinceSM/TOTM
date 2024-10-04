@@ -154,7 +154,8 @@ scale = Vector2( 0.7, 0.7 )
 transform = Transform2D( 0.7, 0, 0, 0.7, 0, 0 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 179, 160 )
+position = Vector2( 179, 167 )
+scale = Vector2( 0.75, 0.75 )
 
 [node name="Coins" type="Node2D" parent="."]
 

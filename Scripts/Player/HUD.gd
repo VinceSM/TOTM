@@ -14,15 +14,15 @@ func _on_Timer_timeout():
 		_restart_game()
 
 func _restart_game():
-	GameData.reset_data()  # Restablecer los datos al reiniciar
+	GameData.reset_data() 
 	get_tree().change_scene("res://Scenes/Levels/1.tscn")
 
 func handleCoinCollected():
-	GameData.add_coin()  # Actualizar las monedas en el Singleton
+	GameData.add_coin()  
 	update_display()
 
 func handlePortalCollected():
-	GameData.add_portal()  # Actualizar los portales en el Singleton
+	GameData.add_portal()  
 	update_display()
 
 func update_display():

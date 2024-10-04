@@ -1,7 +1,9 @@
 extends Node2D
 
-export (int) var nextLevel
+func _ready():
+	$SongLevel.play()
 
+export (int) var nextLevel
 
 func get_next_level():
 	return nextLevel

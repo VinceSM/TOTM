@@ -76,7 +76,6 @@ func add_Portal():
 func die():
 	is_dead = true  
 	_animated_sprite.stop()
-	$deadSound.play()
 	$DeadTimer.start()
 
 func _on_DeadTimer_timeout():
