@@ -24,4 +24,7 @@ stream = ExtResource( 3 )
 volume_db = 1.0
 pitch_scale = 1.5
 
+[node name="SongTimer" type="Timer" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_Portal_body_entered"]
+[connection signal="timeout" from="SongTimer" to="." method="_on_SongTimer_timeout"]

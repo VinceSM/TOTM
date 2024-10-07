@@ -17,7 +17,7 @@ func _ready():
 
 func _input(event):
 	if is_dead:
-		return  # Si está muerto, no responderá a la entrada
+		return  
 	if event.is_action_pressed("ui_up") and not is_on_ceiling:
 		_animated_sprite.flip_v = true 
 		is_on_ceiling = true
@@ -26,7 +26,7 @@ func _input(event):
 		is_on_ceiling = false
 		
 func _process(_delta):
-	if not is_dead:  # Solo permite mover si el jugador no está muerto
+	if not is_dead:  
 		move_player_x()
 		move_player_y()
 
@@ -46,10 +46,8 @@ func move_player_x():
 		_animated_sprite.play("look")
 
 func move_player_y():
-	# Mover hacia arriba
 	if is_on_ceiling and position.y > 0:
 		velocity.y = -vertical_speed
-	# Mover hacia abajo (incluyendo por debajo de la pantalla hasta fall_limit)
 	elif not is_on_ceiling and position.y < fall_limit:
 		velocity.y = vertical_speed
 	else:

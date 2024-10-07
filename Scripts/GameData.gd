@@ -3,6 +3,7 @@ extends Node
 var coins = 0
 var portals = 0
 var total_coins = 0
+ 
 
 func add_coin():
 	coins += 1
@@ -17,4 +18,5 @@ func reset_data():
 
 func get_total_coins():
 	return total_coins
+
 

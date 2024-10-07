@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scenes/Menu/Pause_Menu.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Scenes/Collisionable/Spike.tscn" type="PackedScene" id=9]
 [ext_resource path="res://img/Backgrounds/PNG/Battleground4/Bright/Battleground4.png" type="Texture" id=10]
 [ext_resource path="res://Scenes/Collisionable/Coin.tscn" type="PackedScene" id=11]
+[ext_resource path="res://SoundFx/Level Songs/LevelSong.mp3" type="AudioStream" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 67, 67, 0, 67, 0, 0.5, 67, 0.5 )
@@ -88,7 +89,8 @@ points = PoolVector2Array( 67, 67, 0, 67, 0, 0.5, 67, 0.5 )
 
 [node name="Level4" type="Node2D"]
 script = ExtResource( 8 )
-nextLevel = 1
+nextLevel = 5
+time_left = 30
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 512, 301.5 )
@@ -98,7 +100,7 @@ texture = ExtResource( 10 )
 [node name="Spikes" type="Node2D" parent="."]
 
 [node name="Spike" parent="Spikes" instance=ExtResource( 9 )]
-position = Vector2( 291, 305 )
+position = Vector2( 291, 369 )
 scale = Vector2( 3, 1.5 )
 
 [node name="Spike2" parent="Spikes" instance=ExtResource( 9 )]
@@ -138,12 +140,17 @@ position = Vector2( 562, 480 )
 rotation = -1.5708
 scale = Vector2( 3, 1.5 )
 
+[node name="Spike10" parent="Spikes" instance=ExtResource( 9 )]
+position = Vector2( 786, 421 )
+rotation = 1.5708
+scale = Vector2( 3, 1.5 )
+
 [node name="Spike11" parent="Spikes" instance=ExtResource( 9 )]
 position = Vector2( 865, 114 )
 scale = Vector2( 3, 1.5 )
 
 [node name="Spike12" parent="Spikes" instance=ExtResource( 9 )]
-position = Vector2( 738, 306 )
+position = Vector2( 739, 369 )
 scale = Vector2( 3, 1.5 )
 
 [node name="Spike13" parent="Spikes" instance=ExtResource( 9 )]
@@ -163,7 +170,7 @@ scale = Vector2( 3, 1.5 )
 [node name="Blocks" type="TileMap" parent="."]
 tile_set = SubResource( 3 )
 format = 1
-tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 65536, 1, 0, 65540, 1, 0, 65547, 1, 0, 65551, 1, 0, 131072, 1, 0, 131074, 1, 0, 131078, 1, 0, 131079, 1, 0, 131080, 1, 0, 131081, 1, 0, 131085, 1, 0, 131087, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196619, 1, 0, 196620, 1, 0, 196621, 1, 0, 196622, 1, 0, 196623, 1, 0, 262144, 1, 0, 262159, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327684, 1, 0, 327691, 1, 0, 327693, 1, 0, 327694, 1, 0, 327695, 1, 0, 393216, 1, 0, 393220, 1, 0, 393227, 1, 0, 393231, 1, 0, 458752, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 458765, 1, 0, 458767, 1, 0, 524288, 1, 0, 524292, 1, 0, 524299, 1, 0, 524303, 1, 0, 589824, 1, 0, 589825, 2, 0, 589826, 2, 0, 589827, 2, 0, 589828, 2, 0, 589829, 2, 0, 589830, 2, 0, 589831, 2, 0, 589832, 2, 0, 589833, 2, 0, 589834, 2, 0, 589835, 2, 0, 589836, 2, 0, 589837, 2, 0, 589838, 2, 0, 589839, 1, 0 )
+tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 10, 1, 0, 11, 1, 0, 12, 1, 0, 13, 1, 0, 14, 1, 0, 15, 1, 0, 65536, 1, 0, 65540, 1, 0, 65547, 1, 0, 65551, 1, 0, 131072, 1, 0, 131074, 1, 0, 131078, 1, 0, 131079, 1, 0, 131080, 1, 0, 131081, 1, 0, 131085, 1, 0, 131087, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196612, 1, 0, 196619, 1, 0, 196620, 1, 0, 196621, 1, 0, 196622, 1, 0, 196623, 1, 0, 262144, 1, 0, 262159, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327693, 1, 0, 327694, 1, 0, 327695, 1, 0, 393216, 1, 0, 393220, 1, 0, 393227, 1, 0, 393231, 1, 0, 458752, 1, 0, 458754, 1, 0, 458755, 1, 0, 458756, 1, 0, 458757, 1, 0, 458758, 1, 0, 458761, 1, 0, 458762, 1, 0, 458763, 1, 0, 458764, 1, 0, 458765, 1, 0, 458767, 1, 0, 524288, 1, 0, 524292, 1, 0, 524299, 1, 0, 524303, 1, 0, 589824, 1, 0, 589825, 2, 0, 589826, 2, 0, 589827, 2, 0, 589828, 2, 0, 589829, 2, 0, 589830, 2, 0, 589831, 2, 0, 589832, 2, 0, 589833, 2, 0, 589834, 2, 0, 589835, 2, 0, 589836, 2, 0, 589837, 2, 0, 589838, 2, 0, 589839, 1, 0 )
 
 [node name="HUD" parent="." instance=ExtResource( 3 )]
 
@@ -194,3 +201,6 @@ position = Vector2( 859, 557 )
 
 [node name="PauseMenu" parent="." instance=ExtResource( 1 )]
 visible = false
+
+[node name="SongLevel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )

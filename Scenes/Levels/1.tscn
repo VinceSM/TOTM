@@ -46,6 +46,7 @@ points = PoolVector2Array( 96, 96, 0, 96, 0, 0, 96, 0 )
 pause_mode = 2
 script = ExtResource( 10 )
 nextLevel = 2
+time_left = 30
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 510.5, 297.953 )
