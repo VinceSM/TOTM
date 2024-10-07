@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/Player/ScoreScene.gd" type="Script" id=1]
 [ext_resource path="res://img/Backgrounds/PNG/Battleground3/Bright/Battleground3.png" type="Texture" id=2]
@@ -26,6 +26,21 @@ bg_color = Color( 0.0313726, 0.309804, 0.184314, 1 )
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.0941176, 0.345098, 0.109804, 0.372549 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 22
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 25
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 15
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.113725, 0.278431, 0.345098, 1 )
 
 [node name="Score" type="Node2D"]
 script = ExtResource( 1 )
@@ -58,11 +73,42 @@ custom_styles/normal = SubResource( 6 )
 text = "SAVE"
 
 [node name="Panel" type="Panel" parent="."]
-margin_left = 254.0
-margin_top = 254.0
-margin_right = 785.0
-margin_bottom = 435.0
+margin_left = 253.0
+margin_top = 258.0
+margin_right = 784.0
+margin_bottom = 439.0
 custom_styles/panel = SubResource( 7 )
+
+[node name="NameLabel" type="Label" parent="."]
+margin_left = 277.0
+margin_top = 296.0
+margin_right = 494.0
+margin_bottom = 327.0
+custom_fonts/font = SubResource( 8 )
+text = "ENTER YOUR NAME"
+align = 1
+uppercase = true
+
+[node name="ScoreLabel" type="Label" parent="."]
+margin_left = 539.0
+margin_top = 268.0
+margin_right = 781.0
+margin_bottom = 396.0
+custom_fonts/font = SubResource( 9 )
+text = "
+COINS COLLECTED
+
+0"
+align = 1
+
+[node name="NameInput" type="LineEdit" parent="."]
+margin_left = 296.0
+margin_top = 338.0
+margin_right = 470.0
+margin_bottom = 376.0
+custom_fonts/font = SubResource( 10 )
+custom_styles/normal = SubResource( 11 )
+align = 1
 
 [connection signal="pressed" from="btnMainMenu" to="." method="_on_btnMainMenu_pressed"]
 [connection signal="pressed" from="btnSave" to="." method="_on_btnSave_pressed"]

@@ -40,7 +40,6 @@ points = PoolVector2Array( 138, 138, 0, 138, 0, 0, 138, 0 )
 [node name="Level3" type="Node2D"]
 script = ExtResource( 3 )
 nextLevel = 4
-time_left = 15
 
 [node name="Background" type="Sprite" parent="."]
 position = Vector2( 518, 312 )
@@ -170,6 +169,7 @@ tile_data = PoolIntArray( -65535, 0, 0, -65533, 0, 0, -65531, 0, 0, -65529, 0, 0
 [node name="HUD" parent="." instance=ExtResource( 6 )]
 scale = Vector2( 0.5, 0.5 )
 transform = Transform2D( 0.5, 0, 0, 0.5, 0, 0 )
+time_left = 20
 
 [node name="Player" parent="." instance=ExtResource( 5 )]
 position = Vector2( 514, 542 )
