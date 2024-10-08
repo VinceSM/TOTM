@@ -19,7 +19,7 @@ func _on_btnSave_pressed():
 		print("Debe ingresar un nombre para guardar el score")
 		return
 	save_score(player_name, player_score)
-	#get_tree().change_scene("res://Scenes/Menu/Leaderboard.tscn")
+	get_tree().change_scene("res://Scenes/Menu/Main_Menu.tscn")
 
 func save_score(name, score):
 	var scores = load_scores() 
@@ -43,6 +43,3 @@ func load_scores():
 
 func _sort_scores(a, b):
 	return int(b["score"]) - int(a["score"]) 
-
-func _on_btnMainMenu_pressed():
-	get_tree().change_scene("res://Scenes/Menu/Main_Menu.tscn")

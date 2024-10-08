@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Assets/img/Backgrounds/Small 512x512/Starfields/Starfield_01-512x512.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/Score/FinalScene.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/MusicGame/MusicMenu.tscn" type="PackedScene" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -23,6 +24,8 @@ bg_color = Color( 0.0117647, 0, 0, 0 )
 
 [node name="FinalScene" type="Node2D"]
 script = ExtResource( 3 )
+
+[node name="MenuSound" parent="." instance=ExtResource( 4 )]
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 510, 299 )
