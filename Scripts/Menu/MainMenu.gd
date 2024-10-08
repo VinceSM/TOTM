@@ -1,8 +1,5 @@
 extends Control
 
-func _ready():
-	$SongGame.play()
-
 func _on_PlayButton_pressed():
 	get_tree().change_scene("res://Scenes/Levels/1.tscn")
 

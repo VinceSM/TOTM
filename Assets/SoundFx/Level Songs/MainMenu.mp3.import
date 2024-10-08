@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/MainMenu.mp3-7a7a81278a0811fe5b6a164dc209a00b.mp3str"
+
+[deps]
+
+source_file="res://Assets/SoundFx/Level Songs/MainMenu.mp3"
+dest_files=[ "res://.import/MainMenu.mp3-7a7a81278a0811fe5b6a164dc209a00b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

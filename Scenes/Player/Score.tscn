@@ -90,16 +90,13 @@ align = 1
 uppercase = true
 
 [node name="ScoreLabel" type="Label" parent="."]
-margin_left = 539.0
-margin_top = 268.0
-margin_right = 781.0
+margin_left = 527.0
+margin_top = 323.0
+margin_right = 750.0
 margin_bottom = 396.0
 custom_fonts/font = SubResource( 9 )
-text = "
-COINS COLLECTED
-
-0"
 align = 1
+valign = 1
 
 [node name="NameInput" type="LineEdit" parent="."]
 margin_left = 296.0

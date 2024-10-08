@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/deadPlayer.mp3-2b4b87155c99f7c89de4f23c8cab95ee.mp3str"
+
+[deps]
+
+source_file="res://Assets/SoundFx/Spike/deadPlayer.mp3"
+dest_files=[ "res://.import/deadPlayer.mp3-2b4b87155c99f7c89de4f23c8cab95ee.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

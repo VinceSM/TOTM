@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/LevelSong.mp3-42cbbe0966f8a1505df90fdcd07ca0bb.mp3str"
+
+[deps]
+
+source_file="res://Assets/SoundFx/Level Songs/LevelSong.mp3"
+dest_files=[ "res://.import/LevelSong.mp3-42cbbe0966f8a1505df90fdcd07ca0bb.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
