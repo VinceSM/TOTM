@@ -94,8 +94,8 @@ nextLevel = 5
 [node name="LevelsSound" parent="." instance=ExtResource( 12 )]
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 512, 301.5 )
-scale = Vector2( 0.558333, 0.587963 )
+position = Vector2( 506, 310 )
+scale = Vector2( 0.479687, 0.518519 )
 texture = ExtResource( 10 )
 
 [node name="Spikes" type="Node2D" parent="."]
@@ -197,11 +197,23 @@ position = Vector2( 436, 110 )
 scale = Vector2( 1, 1 )
 
 [node name="Coin4" parent="Coins" instance=ExtResource( 11 )]
-position = Vector2( 872, 302 )
+position = Vector2( 872, 300 )
 scale = Vector2( 1, 1 )
 
 [node name="Coin5" parent="Coins" instance=ExtResource( 11 )]
 position = Vector2( 933, 172 )
+scale = Vector2( 1, 1 )
+
+[node name="Coin6" parent="Coins" instance=ExtResource( 11 )]
+position = Vector2( 160, 297 )
+scale = Vector2( 1, 1 )
+
+[node name="Coin7" parent="Coins" instance=ExtResource( 11 )]
+position = Vector2( 402, 555 )
+scale = Vector2( 1, 1 )
+
+[node name="Coin8" parent="Coins" instance=ExtResource( 11 )]
+position = Vector2( 638, 555 )
 scale = Vector2( 1, 1 )
 
 [node name="Portal" parent="." instance=ExtResource( 4 )]
@@ -209,4 +221,3 @@ position = Vector2( 856, 558 )
 scale = Vector2( 1.3, 1 )
 
 [node name="PauseMenu" parent="." instance=ExtResource( 1 )]
-visible = false

@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Scripts/Score/ScoreEntry.gd" type="Script" id=2]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.0686969, 0.64198, 0.874023, 0.494118 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 33
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 33
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 33
+font_data = ExtResource( 1 )
+
+[node name="ScoreEntry" type="Panel"]
+margin_right = 304.0
+margin_bottom = 32.0
+rect_min_size = Vector2( 304, 32 )
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 2 )
+
+[node name="Position" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 16.0
+custom_fonts/font = SubResource( 1 )
+text = "0."
+
+[node name="NamePlayer" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -102.0
+margin_top = -16.0
+margin_right = -12.0
+margin_bottom = 16.0
+custom_fonts/font = SubResource( 2 )
+text = "NAME"
+
+[node name="Score" type="Label" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -104.0
+margin_top = -16.0
+margin_bottom = 16.0
+custom_fonts/font = SubResource( 3 )
+text = "0"
+align = 2

@@ -3,7 +3,7 @@
 [ext_resource path="res://Assets/Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Menu/HowToPlay.gd" type="Script" id=2]
 [ext_resource path="res://Assets/img/HowToPlay/flechasControles.png" type="Texture" id=3]
-[ext_resource path="res://Entities/CoinsPortals/portal.png" type="Texture" id=4]
+[ext_resource path="res://Assets/img/firePortal.png" type="Texture" id=4]
 [ext_resource path="res://Entities/CoinsPortals/totmCoin.png" type="Texture" id=5]
 [ext_resource path="res://Assets/img/Backgrounds/PNG/Battleground3/Bright/Battleground3.png" type="Texture" id=6]
 [ext_resource path="res://Assets/img/HowToPlay/timer.png" type="Texture" id=7]
@@ -63,12 +63,12 @@ text = "press to move around."
 align = 1
 valign = 1
 
-[node name="Sprite" type="Sprite" parent="Controls"]
+[node name="LDR" type="Sprite" parent="Controls"]
 position = Vector2( 237, 526 )
 scale = Vector2( 0.6, 0.6 )
 texture = ExtResource( 3 )
 
-[node name="UpSprite" type="Sprite" parent="Controls"]
+[node name="Up" type="Sprite" parent="Controls"]
 position = Vector2( 239, 396 )
 scale = Vector2( 0.691919, 0.651515 )
 texture = ExtResource( 8 )
@@ -99,8 +99,8 @@ align = 1
 valign = 1
 
 [node name="Sprite" type="Sprite" parent="CollectPortal"]
-position = Vector2( 239, 185 )
-scale = Vector2( 0.108779, 0.111053 )
+position = Vector2( 242, 202 )
+scale = Vector2( 0.2, 0.2 )
 texture = ExtResource( 4 )
 
 [node name="CollectCoin" type="CanvasLayer" parent="."]

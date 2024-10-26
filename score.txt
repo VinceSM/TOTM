@@ -1,1 +1,1 @@
-[{"name":"aaaa","score":16}]
+[{"name":"aaaa","score":16},{"name":"bbbb","score":16}]
