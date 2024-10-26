@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Panel",
+"class": "ScoreEntry",
+"language": "GDScript",
+"path": "res://Scripts/Score/ScoreEntry.gd"
+} ]
+_global_script_class_icons={
+"ScoreEntry": ""
+}
+
 [application]
 
 config/name="TOTM"

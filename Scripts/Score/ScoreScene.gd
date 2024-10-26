@@ -3,8 +3,8 @@ extends Node
 var player_name = ""
 var player_score = 0
 
-const SCORE_FILE_PATH = "res://score.json"
-const MAX_SCORES = 10  
+const SCORE_FILE_PATH = "res://score.txt"
+const MAX_SCORES = 8 
 
 func _ready():
 	player_score = GameData.coins  
@@ -23,7 +23,7 @@ func _on_btnSave_pressed():
 
 func save_score(name, score):
 	var scores = load_scores() 
-	scores.append({"name": name, "score": score})
+	scores.append({"position": 0,"name": name, "score": score})
 	scores.sort_custom(self, "_sort_scores")
 	if scores.size() > MAX_SCORES:
 		scores = scores.slice(0, MAX_SCORES)
@@ -42,4 +42,4 @@ func load_scores():
 	return []  
 
 func _sort_scores(a, b):
-	return int(b["score"]) - int(a["score"]) 
+	return int(b["score"]) > int(a["score"]) 

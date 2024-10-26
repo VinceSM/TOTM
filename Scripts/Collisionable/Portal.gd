@@ -4,7 +4,7 @@ func _on_Portal_body_entered(body):
 	if body.get_name() == "Player":
 		$SongPortal.pitch_scale = 1.5
 		$SongPortal.play() 
-		body.add_Portal()  
+		body.add_Portal()
 		$SongTimer.start() 
 
 func _on_SongTimer_timeout():

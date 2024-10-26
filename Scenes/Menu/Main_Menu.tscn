@@ -1,9 +1,10 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Menu/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://Assets/img/Backgrounds/PNG/Battleground1/Bright/Battleground1.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/MusicGame/MusicMenu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Player/LeaderBoard.tscn" type="PackedScene" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -24,7 +25,7 @@ font_data = ExtResource( 1 )
 bg_color = Color( 0.0313726, 0.309804, 0.184314, 1 )
 
 [sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.447059, 0.780392, 0.0392157, 0.207843 )
+bg_color = Color( 0.0392157, 0.658824, 0.780392, 0.517647 )
 
 [sub_resource type="DynamicFont" id=7]
 size = 35
@@ -34,17 +35,7 @@ font_data = ExtResource( 1 )
 bg_color = Color( 0.0313726, 0.309804, 0.184314, 1 )
 
 [sub_resource type="StyleBoxFlat" id=9]
-bg_color = Color( 0.447059, 0.780392, 0.0392157, 0.207843 )
-
-[sub_resource type="DynamicFont" id=10]
-size = 35
-font_data = ExtResource( 1 )
-
-[sub_resource type="StyleBoxFlat" id=11]
-bg_color = Color( 0.0313726, 0.309804, 0.184314, 1 )
-
-[sub_resource type="StyleBoxFlat" id=12]
-bg_color = Color( 0.447059, 0.780392, 0.0392157, 0.207843 )
+bg_color = Color( 0.0392157, 0.658824, 0.780392, 0.517647 )
 
 [node name="Main_Menu" type="Control"]
 script = ExtResource( 2 )
@@ -86,41 +77,33 @@ autowrap = true
 uppercase = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 417.0
-margin_top = 231.0
-margin_right = 657.0
-margin_bottom = 506.0
+margin_left = 250.0
+margin_top = 228.0
+margin_right = 490.0
+margin_bottom = 503.0
 custom_constants/separation = 50
 alignment = 1
 
 [node name="PlayButton" type="Button" parent="VBoxContainer"]
-margin_top = 36.0
+margin_top = 78.0
 margin_right = 240.0
-margin_bottom = 70.0
+margin_bottom = 112.0
 custom_fonts/font = SubResource( 5 )
 custom_styles/hover = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
 text = "PLAY"
 
 [node name="QuitButton" type="Button" parent="VBoxContainer"]
-margin_top = 120.0
+margin_top = 162.0
 margin_right = 240.0
-margin_bottom = 154.0
+margin_bottom = 196.0
 custom_fonts/font = SubResource( 7 )
 custom_styles/hover = SubResource( 8 )
 custom_styles/normal = SubResource( 9 )
 text = "QUIT"
 
-[node name="HowToPlayBtn" type="Button" parent="VBoxContainer"]
-margin_top = 204.0
-margin_right = 240.0
-margin_bottom = 238.0
-custom_fonts/font = SubResource( 10 )
-custom_styles/hover = SubResource( 11 )
-custom_styles/normal = SubResource( 12 )
-text = "how to play"
-icon_align = 1
+[node name="LeaderBoard" parent="." instance=ExtResource( 5 )]
+position = Vector2( 565, 208 )
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_PlayButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/HowToPlayBtn" to="." method="_on_HowToPlayBtn_pressed"]

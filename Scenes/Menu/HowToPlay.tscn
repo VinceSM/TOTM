@@ -15,10 +15,10 @@ size = 50
 font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=7]
-bg_color = Color( 0.129412, 0.384314, 0.145098, 0.615686 )
+bg_color = Color( 0.0392157, 0.658824, 0.780392, 0.517647 )
 
 [sub_resource type="StyleBoxFlat" id=8]
-bg_color = Color( 0, 0, 0, 0 )
+bg_color = Color( 0.207843, 0.521569, 0.478431, 0.823529 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 20
@@ -40,7 +40,7 @@ position = Vector2( 514.5, 305 )
 scale = Vector2( 0.545312, 0.587987 )
 texture = ExtResource( 6 )
 
-[node name="BackBtn" type="Button" parent="."]
+[node name="PlayBtn" type="Button" parent="."]
 margin_left = 435.0
 margin_top = 412.0
 margin_right = 611.0
@@ -48,7 +48,7 @@ margin_bottom = 508.0
 custom_fonts/font = SubResource( 6 )
 custom_styles/hover = SubResource( 7 )
 custom_styles/normal = SubResource( 8 )
-text = "BACK"
+text = "PLAY"
 
 [node name="Controls" type="CanvasLayer" parent="."]
 
@@ -141,4 +141,4 @@ position = Vector2( 772, 198 )
 scale = Vector2( 0.0405, 0.04175 )
 texture = ExtResource( 7 )
 
-[connection signal="pressed" from="BackBtn" to="." method="_on_BackBtn_pressed"]
+[connection signal="pressed" from="PlayBtn" to="." method="_on_PlayBtn_pressed"]
