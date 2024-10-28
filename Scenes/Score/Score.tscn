@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://Scripts/Score/ScoreScene.gd" type="Script" id=1]
+[ext_resource path="res://Scripts/Score/Score.gd" type="Script" id=1]
 [ext_resource path="res://Assets/img/Backgrounds/PNG/Battleground3/Bright/Battleground3.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Scenes/MusicGame/MusicMenu.tscn" type="PackedScene" id=4]
