@@ -2,15 +2,18 @@ extends Area2D
 
 func _on_Portal_body_entered(body):
 	if body.get_name() == "Player":
-		$SongPortal.pitch_scale = 1.5
-		$SongPortal.play() 
 		body.add_Portal()
-		$SongTimer.start() 
+		$SongPortal.pitch_scale = 1.5 
+		$SongPortal.play()
 
-func _on_SongTimer_timeout():
-	if $SongPortal.playing:
-		$SongPortal.stop() 
-	advance_to_next_level() 
+		set_deferred("monitoring", false)
+		set_deferred("collision_layer", 0)
+		set_deferred("collision_mask", 0)
+		visible=false
+		
+		yield(get_tree().create_timer(0.5), "timeout")
+		queue_free() 
+		advance_to_next_level() 
 
 func advance_to_next_level():
 	var next_level = get_parent().get_next_level()

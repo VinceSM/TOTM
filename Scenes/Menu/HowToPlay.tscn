@@ -3,8 +3,8 @@
 [ext_resource path="res://Assets/Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Menu/HowToPlay.gd" type="Script" id=2]
 [ext_resource path="res://Assets/img/HowToPlay/flechasControles.png" type="Texture" id=3]
-[ext_resource path="res://Assets/img/firePortal.png" type="Texture" id=4]
-[ext_resource path="res://Entities/CoinsPortals/totmCoin.png" type="Texture" id=5]
+[ext_resource path="res://Assets/img/CoinsPortals/Coin.png" type="Texture" id=4]
+[ext_resource path="res://Assets/img/CoinsPortals/Portal.png" type="Texture" id=5]
 [ext_resource path="res://Assets/img/Backgrounds/PNG/Battleground3/Bright/Battleground3.png" type="Texture" id=6]
 [ext_resource path="res://Assets/img/HowToPlay/timer.png" type="Texture" id=7]
 [ext_resource path="res://Assets/img/HowToPlay/flechasControlesUp.png" type="Texture" id=8]
@@ -101,7 +101,7 @@ valign = 1
 [node name="Sprite" type="Sprite" parent="CollectPortal"]
 position = Vector2( 242, 202 )
 scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [node name="CollectCoin" type="CanvasLayer" parent="."]
 
@@ -119,8 +119,8 @@ valign = 1
 
 [node name="Sprite" type="Sprite" parent="CollectCoin"]
 position = Vector2( 776, 472 )
-scale = Vector2( 0.303061, 0.305 )
-texture = ExtResource( 5 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
 
 [node name="TimeGame" type="CanvasLayer" parent="."]
 

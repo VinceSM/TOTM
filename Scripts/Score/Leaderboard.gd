@@ -1,6 +1,6 @@
 extends Node
 
-const SCORE_FILE_PATH = "res://score.txt"
+const SCORE_FILE_PATH = "res://DataGame/score.txt"
 const SCORE_ENTRY_SCENE_PATH = "res://Scenes/Score/ScoreEntry.tscn"  # Ajusta la ruta a donde tengas la escena de ScoreEntry
 const MAX_SCORES = 8
 

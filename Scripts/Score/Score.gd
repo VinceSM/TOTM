@@ -3,7 +3,7 @@ extends Node
 var player_name = ""
 var player_score = 0
 
-const SCORE_FILE_PATH = "res://score.txt"
+const SCORE_FILE_PATH = "res://DataGame/score.txt"
 const MAX_SCORES = 8 
 
 func _ready():
