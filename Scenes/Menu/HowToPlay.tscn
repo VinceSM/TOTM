@@ -41,10 +41,14 @@ scale = Vector2( 0.545312, 0.587987 )
 texture = ExtResource( 6 )
 
 [node name="PlayBtn" type="Button" parent="."]
-margin_left = 435.0
-margin_top = 412.0
-margin_right = 611.0
-margin_bottom = 508.0
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -83.0
+margin_top = -114.0
+margin_right = 93.0
+margin_bottom = -18.0
 custom_fonts/font = SubResource( 6 )
 custom_styles/hover = SubResource( 7 )
 custom_styles/normal = SubResource( 8 )

@@ -185,39 +185,39 @@ scale = Vector2( 0.75, 0.75 )
 position = Vector2( 0, -3 )
 
 [node name="Coin" parent="Coins" instance=ExtResource( 11 )]
-position = Vector2( 94, 173 )
+position = Vector2( 95, 153 )
 scale = Vector2( 1, 1 )
 
 [node name="Coin2" parent="Coins" instance=ExtResource( 11 )]
-position = Vector2( 597, 110 )
-scale = Vector2( 1, 1 )
+position = Vector2( 596, 97 )
+scale = Vector2( 1, 0.8 )
 
 [node name="Coin3" parent="Coins" instance=ExtResource( 11 )]
-position = Vector2( 436, 110 )
-scale = Vector2( 1, 1 )
+position = Vector2( 436, 97 )
+scale = Vector2( 1, 0.8 )
 
 [node name="Coin4" parent="Coins" instance=ExtResource( 11 )]
-position = Vector2( 872, 300 )
-scale = Vector2( 1, 1 )
+position = Vector2( 871, 289 )
+scale = Vector2( 1, 0.8 )
 
 [node name="Coin5" parent="Coins" instance=ExtResource( 11 )]
-position = Vector2( 933, 172 )
+position = Vector2( 933, 153 )
 scale = Vector2( 1, 1 )
 
 [node name="Coin6" parent="Coins" instance=ExtResource( 11 )]
-position = Vector2( 160, 297 )
-scale = Vector2( 1, 1 )
+position = Vector2( 160, 289 )
+scale = Vector2( 1, 0.8 )
 
 [node name="Coin7" parent="Coins" instance=ExtResource( 11 )]
-position = Vector2( 402, 555 )
-scale = Vector2( 1, 1 )
+position = Vector2( 399, 549 )
+scale = Vector2( 1, 0.8 )
 
 [node name="Coin8" parent="Coins" instance=ExtResource( 11 )]
-position = Vector2( 638, 555 )
-scale = Vector2( 1, 1 )
+position = Vector2( 638, 549 )
+scale = Vector2( 1, 0.8 )
 
 [node name="Portal" parent="." instance=ExtResource( 4 )]
-position = Vector2( 856, 558 )
-scale = Vector2( 1.3, 1 )
+position = Vector2( 851, 554 )
+scale = Vector2( 1.7, 1.7 )
 
 [node name="PauseMenu" parent="." instance=ExtResource( 1 )]
