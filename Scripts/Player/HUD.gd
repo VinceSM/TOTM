@@ -9,7 +9,8 @@ func _ready():
 func _on_Timer_timeout():
 	time_left -= 1
 	$TimeLeftTxt.text = String(time_left)
-	
+	if time_left < 11:
+		$TimeSound.play()
 	if time_left <= 0:
 		_restart_game()
 
