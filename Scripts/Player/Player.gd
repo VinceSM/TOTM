@@ -26,8 +26,8 @@ func _input(event):
 		player.flip_v = false
 		is_on_ceiling = false
 		
-func _process(_delta):
-	if not is_dead:  
+func _process(delta):
+	if not is_dead and not get_tree().paused:
 		move_player_x()
 		move_player_y()
 

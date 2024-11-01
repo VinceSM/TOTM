@@ -6,7 +6,7 @@
 [ext_resource path="res://Scenes/Collisionable/Coin.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Collisionable/Portal.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Assets/img/Backgrounds/Fondo_2.png" type="Texture" id=7]
+[ext_resource path="res://Assets/img/Backgrounds/Fondo_1.png" type="Texture" id=7]
 [ext_resource path="res://Assets/img/Backgrounds/Tiles/Tile1.jpg" type="Texture" id=8]
 [ext_resource path="res://Assets/Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://Scripts/Singleton/Levels.gd" type="Script" id=10]
@@ -56,8 +56,8 @@ nextLevel = 2
 [node name="LevelsSound" parent="." instance=ExtResource( 11 )]
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 515, 308 )
-scale = Vector2( 1.44367, 1.07533 )
+position = Vector2( 518.5, 319 )
+scale = Vector2( 0.838393, 0.532143 )
 texture = ExtResource( 7 )
 
 [node name="Spikes" type="Node2D" parent="."]
@@ -174,3 +174,5 @@ scale = Vector2( 1.7, 1.7 )
 
 [node name="PauseMenu" parent="." instance=ExtResource( 3 )]
 visible = false
+margin_left = 1.52588e-05
+margin_right = 1.52588e-05

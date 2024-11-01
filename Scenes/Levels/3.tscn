@@ -44,8 +44,8 @@ nextLevel = 4
 [node name="LevelsSound" parent="." instance=ExtResource( 10 )]
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 528.5, 308 )
-scale = Vector2( 2.3436, 1.43735 )
+position = Vector2( 514.5, 303 )
+scale = Vector2( 2.15403, 1.32151 )
 texture = ExtResource( 4 )
 
 [node name="Spikes" type="Node2D" parent="."]

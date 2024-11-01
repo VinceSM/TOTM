@@ -6,7 +6,7 @@
 [ext_resource path="res://Scenes/Collisionable/Portal.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Player/HUD.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Menu/Pause_Menu.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Assets/img/Backgrounds/Fondo_1.png" type="Texture" id=7]
+[ext_resource path="res://Assets/img/Backgrounds/Fondo_4.png" type="Texture" id=7]
 [ext_resource path="res://Assets/img/Backgrounds/Tiles/TileLevel.png" type="Texture" id=8]
 [ext_resource path="res://Scripts/Singleton/Levels.gd" type="Script" id=9]
 [ext_resource path="res://Scenes/MusicGame/MusicLevels.tscn" type="PackedScene" id=10]
@@ -68,8 +68,8 @@ nextLevel = 3
 [node name="LevelsSound" parent="." instance=ExtResource( 10 )]
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 496, 315 )
-scale = Vector2( 1.46319, 1.15038 )
+position = Vector2( 511.976, 329 )
+scale = Vector2( 0.835757, 0.494643 )
 texture = ExtResource( 7 )
 
 [node name="Spikes" type="Node2D" parent="."]

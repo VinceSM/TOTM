@@ -8,8 +8,9 @@ func _input(event):
 		_toggle_pause_menu()
 
 func _toggle_pause_menu():
-	visible = not get_tree().paused
 	get_tree().paused = not get_tree().paused
+	visible = get_tree().paused
+
 
 func _on_Main_Menu_pressed():
 	GameData.reset_data()
