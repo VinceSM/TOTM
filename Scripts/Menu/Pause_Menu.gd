@@ -1,5 +1,7 @@
 extends Control
 
+class_name PauseMenu
+
 # Método llamado cuando el nodo está listo. Oculta el menú de pausa al iniciar.
 func _ready():
 	visible = false  
@@ -14,6 +16,11 @@ func _input(event):
 func _toggle_pause_menu():
 	visible = not get_tree().paused  
 	get_tree().paused = not get_tree().paused  
+
+# Método para resetear el estado del menu de pausa
+func reset_pause_state():
+	visible = false
+	get_tree().paused = false
 
 # Método para manejar la transición al menú principal
 # Restablece los datos de juego y cambia la escena al menú principal.

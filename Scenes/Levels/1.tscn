@@ -160,7 +160,7 @@ position = Vector2( 867, 132 )
 scale = Vector2( 1, 1 )
 
 [node name="Coin3" parent="Coins" instance=ExtResource( 4 )]
-position = Vector2( 166, 303 )
+position = Vector2( 137, 304 )
 scale = Vector2( 1, 1 )
 
 [node name="Coin4" parent="Coins" instance=ExtResource( 4 )]
@@ -173,5 +173,7 @@ rotation = -6.28319
 scale = Vector2( 1.7, 1.7 )
 
 [node name="PauseMenu" parent="." instance=ExtResource( 3 )]
-margin_left = 1.52588e-05
-margin_right = 1.52588e-05
+margin_left = 1.0
+margin_top = 2.0
+margin_right = 1.0
+margin_bottom = 2.0

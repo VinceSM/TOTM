@@ -8,6 +8,7 @@
 extents = Vector2( 9, 5 )
 
 [node name="Spike" type="Area2D"]
+pause_mode = 2
 script = ExtResource( 2 )
 
 [node name="Enemy" type="Sprite" parent="."]

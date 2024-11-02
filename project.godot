@@ -9,13 +9,13 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "Panel",
-"class": "ScoreEntry",
+"base": "Control",
+"class": "PauseMenu",
 "language": "GDScript",
-"path": "res://Scripts/Score/ScoreEntry.gd"
+"path": "res://Scripts/Menu/Pause_Menu.gd"
 } ]
 _global_script_class_icons={
-"ScoreEntry": ""
+"PauseMenu": ""
 }
 
 [application]
