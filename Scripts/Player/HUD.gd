@@ -7,12 +7,13 @@ func _ready():
 	$Timer.start()
 
 func _on_Timer_timeout():
-	time_left -= 1
-	$TimeLeftTxt.text = String(time_left)
-	if time_left < 11:
-		$TimeSound.play()
-	if time_left <= 0:
-		_restart_game()
+	if not get_tree().paused:
+		time_left -= 1
+		$TimeLeftTxt.text = String(time_left)
+		if time_left < 11:
+			$TimeSound.play()
+		if time_left <= 0:
+			_restart_game()
 
 func _restart_game():
 	GameData.reset_data() 

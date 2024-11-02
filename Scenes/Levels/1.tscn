@@ -173,6 +173,5 @@ rotation = -6.28319
 scale = Vector2( 1.7, 1.7 )
 
 [node name="PauseMenu" parent="." instance=ExtResource( 3 )]
-visible = false
 margin_left = 1.52588e-05
 margin_right = 1.52588e-05
