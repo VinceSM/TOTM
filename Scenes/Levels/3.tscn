@@ -38,6 +38,7 @@ points = PoolVector2Array( 138, 138, 0, 138, 0, 0, 138, 0 )
 0/z_index = 0
 
 [node name="Level3" type="Node2D"]
+pause_mode = 2
 script = ExtResource( 3 )
 nextLevel = 4
 

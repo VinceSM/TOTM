@@ -1,1 +1,0 @@
-[{"name":"dddd","score":23},{"name":"aaaa","score":16},{"name":"bbbb","score":16},{"name":"cccc","score":11},{"name":"eeee","score":10},{"name":"ffff","score":7}]

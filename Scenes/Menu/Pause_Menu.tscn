@@ -24,6 +24,7 @@ font_data = ExtResource( 1 )
 bg_color = Color( 0.0509804, 0.298039, 0.898039, 0.835294 )
 
 [node name="PauseMenu" type="Control"]
+pause_mode = 2
 script = ExtResource( 3 )
 
 [node name="Panel" type="Panel" parent="."]
