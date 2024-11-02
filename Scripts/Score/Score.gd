@@ -24,7 +24,7 @@ func _on_btnSave_pressed():
 func save_score(name, score):
 	var scores = load_scores() 
 	scores.append({"name": name, "score": score})
-	scores.sort_custom(self, "_sort_scores")
+	scores.sort_custom(self, "get_best_score")
 	if scores.size() > MAX_SCORES:
 		scores = scores.slice(0, MAX_SCORES)
 	var file = File.new()
@@ -42,5 +42,10 @@ func load_scores():
 	return []  
 
 #Funcion que saca el mejor puntaje
-func _sort_scores(a, b):
-	return int(b["score"]) - int(a["score"]) 
+func get_best_score():
+	var scores = load_scores()
+	var best_score = 0
+	for score_entry in scores:
+		if score_entry["score"] > best_score:
+			best_score = score_entry["score"]
+	return best_score 

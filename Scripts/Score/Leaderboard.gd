@@ -49,12 +49,17 @@ func load_scores():
 			print("Error: El archivo de puntajes está vacío o mal formateado.")
 	
 	# Asegura que solo se devuelvan los mejores puntajes, ordenados
-	scores.sort_custom(self, "_sort_scores")
+	scores.sort_custom(self, "get_best_score")
 	if scores.size() > MAX_SCORES:
 		scores = scores.slice(0, MAX_SCORES)
 	
 	return scores
 
 # Función para ordenar puntajes de mayor a menor
-func _sort_scores(a, b):
-	return int(b["score"]) - int(a["score"])
+func get_best_score():
+	var scores = load_scores()
+	var best_score = 0
+	for score_entry in scores:
+		if score_entry["score"] > best_score:
+			best_score = score_entry["score"]
+	return best_score

@@ -1,7 +1,6 @@
 extends Panel
 class_name ScoreEntry
 
-
 func setPosition(position: int):
 	$Position.text = str(position)
 
