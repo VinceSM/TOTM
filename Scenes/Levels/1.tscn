@@ -67,20 +67,20 @@ position = Vector2( 442, 424 )
 rotation = -1.5708
 scale = Vector2( 2, 2 )
 
-[node name="Spike4" parent="Spikes" instance=ExtResource( 1 )]
-light_mask = 4
-position = Vector2( 442, 504 )
-rotation = -1.5708
-scale = Vector2( 2, 2 )
-
 [node name="Spike2" parent="Spikes" instance=ExtResource( 1 )]
-position = Vector2( 712, 250 )
+position = Vector2( 712, 244 )
 rotation = -3.14159
 scale = Vector2( 2, 2 )
 
 [node name="Spike3" parent="Spikes" instance=ExtResource( 1 )]
-position = Vector2( 754, 250 )
+position = Vector2( 754, 244 )
 rotation = -3.14159
+scale = Vector2( 2, 2 )
+
+[node name="Spike4" parent="Spikes" instance=ExtResource( 1 )]
+light_mask = 4
+position = Vector2( 442, 504 )
+rotation = -1.5708
 scale = Vector2( 2, 2 )
 
 [node name="Spike5" parent="Spikes" instance=ExtResource( 1 )]
@@ -103,6 +103,36 @@ scale = Vector2( 2, 2 )
 light_mask = 4
 position = Vector2( 442, 464 )
 rotation = -1.5708
+scale = Vector2( 2, 2 )
+
+[node name="Spike9" parent="Spikes" instance=ExtResource( 1 )]
+position = Vector2( 593, 92 )
+rotation = 1.5708
+scale = Vector2( 2, 2 )
+
+[node name="Spike10" parent="Spikes" instance=ExtResource( 1 )]
+position = Vector2( 593, 171 )
+rotation = 1.5708
+scale = Vector2( 2, 2 )
+
+[node name="Spike11" parent="Spikes" instance=ExtResource( 1 )]
+position = Vector2( 593, 132 )
+rotation = 1.5708
+scale = Vector2( 2, 2 )
+
+[node name="Spike12" parent="Spikes" instance=ExtResource( 1 )]
+position = Vector2( 1290, -460.003 )
+rotation = 3.14159
+scale = Vector2( 4, 4 )
+
+[node name="Spike13" parent="Spikes" instance=ExtResource( 1 )]
+position = Vector2( 593, 211 )
+rotation = 1.5708
+scale = Vector2( 2, 2 )
+
+[node name="Spike14" parent="Spikes" instance=ExtResource( 1 )]
+position = Vector2( 593, 52 )
+rotation = 1.5708
 scale = Vector2( 2, 2 )
 
 [node name="Blocks" type="TileMap" parent="."]
@@ -173,6 +203,7 @@ rotation = -6.28319
 scale = Vector2( 1.7, 1.7 )
 
 [node name="PauseMenu" parent="." instance=ExtResource( 3 )]
+visible = false
 margin_left = 1.0
 margin_top = 2.0
 margin_right = 1.0

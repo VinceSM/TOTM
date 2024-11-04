@@ -13,7 +13,7 @@ func _ready():
 
 # Carga los puntajes del archivo y los muestra en el leaderboard
 func load_and_display_scores():
-	var scores = load_scores()  
+	var scores = load_scores()  # Carga los puntajes del archivo
 	
 	# Itera sobre cada puntaje y lo añade a la lista del leaderboard
 	for i in range(scores.size()):
@@ -25,7 +25,7 @@ func load_and_display_scores():
 # @param name: Nombre del jugador
 # @param score: Puntaje del jugador
 func add_score_to_list(position: int, name: String, score: int):
-	var score_entry_scene = load(SCORE_ENTRY_SCENE_PATH) 
+	var score_entry_scene = load(SCORE_ENTRY_SCENE_PATH)
 	if not score_entry_scene:
 		print("Error: No se encontró la escena ScoreEntry.")
 		return
@@ -41,26 +41,28 @@ func add_score_to_list(position: int, name: String, score: int):
 
 # Carga los puntajes almacenados en el archivo y los devuelve como una lista ordenada
 # @return Devuelve una lista de puntajes, ordenados de mayor a menor y limitados al número máximo de puntajes.
-func load_scores():
-	var file = File.new() 
-	var scores = []  
+func load_scores() -> Array:
+	var file = File.new()
+	var scores = []
 	
-	if file.file_exists(SCORE_FILE_PATH): 
+	if file.file_exists(SCORE_FILE_PATH):
 		file.open(SCORE_FILE_PATH, File.READ)
-		var data = file.get_as_text()  
+		var data = file.get_as_text()
 		file.close()
 		
-		# Convierte el texto en JSON y verifica si el formato es una lista
+		# Si el archivo está vacío o los datos no son válidos, retorna una lista vacía
+		if data.strip_edges() == "":
+			return []
 		var parsed_data = parse_json(data)
 		if typeof(parsed_data) == TYPE_ARRAY:
-			scores = parsed_data
+			scores = parsed_data  # Utiliza los datos válidos
 		else:
-			print("Error: El archivo de puntajes está vacío o mal formateado.")
+			print("Error: Datos de puntaje no válidos en el archivo")
 	
 	# Ordena la lista de puntajes de mayor a menor
 	scores.sort_custom(self, "get_best_score")
 	if scores.size() > MAX_SCORES:
-		scores = scores.slice(0, MAX_SCORES) 
+		scores = scores.slice(0, MAX_SCORES)
 	
 	return scores
 

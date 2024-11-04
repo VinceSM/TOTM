@@ -103,12 +103,12 @@ scale = Vector2( 2, 2 )
 
 [node name="Spike6" parent="Spikes" instance=ExtResource( 1 )]
 light_mask = 512
-position = Vector2( 84, 173 )
+position = Vector2( 531, 173 )
 scale = Vector2( 2, 2 )
 
 [node name="Spike7" parent="Spikes" instance=ExtResource( 1 )]
 light_mask = 512
-position = Vector2( 299, 173 )
+position = Vector2( 230, 364 )
 scale = Vector2( 2, 2 )
 
 [node name="Spike8" parent="Spikes" instance=ExtResource( 1 )]
@@ -123,12 +123,12 @@ scale = Vector2( 2, 2 )
 
 [node name="Spike10" parent="Spikes" instance=ExtResource( 1 )]
 light_mask = 512
-position = Vector2( 842, 557 )
+position = Vector2( 826, 558 )
 scale = Vector2( 2, 2 )
 
 [node name="Spike11" parent="Spikes" instance=ExtResource( 1 )]
 light_mask = 512
-position = Vector2( 802, 557 )
+position = Vector2( 786, 558 )
 scale = Vector2( 2, 2 )
 
 [node name="Spike12" parent="Spikes" instance=ExtResource( 1 )]
@@ -180,7 +180,7 @@ position = Vector2( 384, 533 )
 scale = Vector2( 1, 1 )
 
 [node name="Coin5" parent="Coins" instance=ExtResource( 2 )]
-position = Vector2( 568, 149 )
+position = Vector2( 592, 150 )
 scale = Vector2( 1, 1 )
 
 [node name="Portal" parent="." instance=ExtResource( 4 )]
