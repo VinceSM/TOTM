@@ -56,8 +56,8 @@ nextLevel = 2
 [node name="LevelsSound" parent="." instance=ExtResource( 11 )]
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 518.5, 319 )
-scale = Vector2( 0.838393, 0.532143 )
+position = Vector2( 523, 302.5 )
+scale = Vector2( 0.864286, 0.502679 )
 texture = ExtResource( 7 )
 
 [node name="Spikes" type="Node2D" parent="."]
@@ -173,7 +173,7 @@ uppercase = true
 [node name="HUD" parent="." instance=ExtResource( 2 )]
 scale = Vector2( 0.5, 0.5 )
 transform = Transform2D( 0.5, 0, 0, 0.5, 0, 0 )
-time_left = 25
+time_left = 20
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
 position = Vector2( 132, 93 )

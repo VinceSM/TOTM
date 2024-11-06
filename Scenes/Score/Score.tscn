@@ -1,26 +1,28 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Scripts/Score/Score.gd" type="Script" id=1]
 [ext_resource path="res://Assets/img/Backgrounds/PNG/Battleground3/Bright/Battleground3.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://Scenes/MusicGame/MusicMenu.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/Fonts/KiriFont.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/Fonts/Montreal-Regular.ttf" type="DynamicFontData" id=6]
 
 [sub_resource type="DynamicFont" id=4]
 size = 30
-font_data = ExtResource( 3 )
+font_data = ExtResource( 6 )
 
 [sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.0941176, 0.345098, 0.109804, 1 )
+bg_color = Color( 0.113725, 0.278431, 0.345098, 1 )
 
 [sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.0313726, 0.309804, 0.184314, 1 )
+bg_color = Color( 0.0705882, 0.643137, 0.87451, 0.654902 )
 
 [sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 0.0941176, 0.345098, 0.109804, 0.372549 )
 
 [sub_resource type="DynamicFont" id=8]
-size = 22
-font_data = ExtResource( 3 )
+size = 15
+font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=9]
 size = 25
@@ -44,10 +46,10 @@ scale = Vector2( 0.56875, 0.614815 )
 texture = ExtResource( 2 )
 
 [node name="btnSave" type="Button" parent="."]
-margin_left = 382.0
-margin_top = 502.0
-margin_right = 635.0
-margin_bottom = 561.0
+margin_left = 410.0
+margin_top = 503.0
+margin_right = 577.0
+margin_bottom = 562.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
 custom_styles/hover = SubResource( 5 )
@@ -63,12 +65,13 @@ custom_styles/panel = SubResource( 7 )
 
 [node name="NameLabel" type="Label" parent="."]
 margin_left = 277.0
-margin_top = 296.0
-margin_right = 494.0
+margin_top = 286.0
+margin_right = 482.0
 margin_bottom = 327.0
 custom_fonts/font = SubResource( 8 )
 text = "ENTER YOUR NAME"
 align = 1
+valign = 1
 uppercase = true
 
 [node name="ScoreLabel" type="Label" parent="."]
