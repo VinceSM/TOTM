@@ -8,7 +8,7 @@
 [ext_resource path="res://Scenes/Player/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Assets/img/Backgrounds/Fondo_1.png" type="Texture" id=7]
 [ext_resource path="res://Assets/img/Backgrounds/Tiles/Tile1.jpg" type="Texture" id=8]
-[ext_resource path="res://Assets/Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Assets/Fonts/KiriFont.otf" type="DynamicFontData" id=9]
 [ext_resource path="res://Scripts/Singleton/Levels.gd" type="Script" id=10]
 [ext_resource path="res://Scenes/MusicGame/MusicLevels.tscn" type="PackedScene" id=11]
 
@@ -39,7 +39,7 @@ points = PoolVector2Array( 96, 96, 0, 96, 0, 0, 96, 0 )
 0/z_index = 0
 
 [sub_resource type="DynamicFont" id=6]
-size = 20
+size = 17
 font_data = ExtResource( 9 )
 
 [sub_resource type="StyleBoxFlat" id=8]
