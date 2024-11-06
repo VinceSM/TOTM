@@ -1,24 +1,25 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Assets/Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Fonts/KiriFont.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Fonts/Montreal-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Scripts/Menu/Pause_Menu.gd" type="Script" id=3]
 
 [sub_resource type="StyleBoxFlat" id=3]
 bg_color = Color( 0.0705882, 0.643137, 0.87451, 0.662745 )
 
 [sub_resource type="DynamicFont" id=1]
-size = 64
+size = 50
 outline_color = Color( 0.988235, 0.984314, 0.992157, 1 )
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 45
-font_data = ExtResource( 1 )
+size = 40
+font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=4]
 size = 30
 outline_color = Color( 0.0313726, 0.4, 0.227451, 0 )
-font_data = ExtResource( 1 )
+font_data = ExtResource( 2 )
 
 [sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.0509804, 0.298039, 0.898039, 0.835294 )
@@ -35,10 +36,10 @@ margin_bottom = 455.0
 custom_styles/panel = SubResource( 3 )
 
 [node name="Pause" type="Label" parent="."]
-margin_left = 285.0
-margin_top = 175.0
-margin_right = 721.0
-margin_bottom = 253.0
+margin_left = 264.0
+margin_top = 173.0
+margin_right = 750.0
+margin_bottom = 251.0
 custom_colors/font_color = Color( 0.113725, 0.278431, 0.345098, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "GAME PAUSED"

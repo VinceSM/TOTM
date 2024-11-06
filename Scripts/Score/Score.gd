@@ -1,68 +1,64 @@
 extends Node
 
-# Nombre del jugador y su puntuación
+# Variables para almacenar el nombre y el puntaje del jugador
 var player_name = ""
 var player_score = 0
 
-# Ruta del archivo de puntuaciones y límite de puntajes a guardar
+# Ruta al archivo de puntajes y límite máximo de puntajes guardados
 const SCORE_FILE_PATH = "res://DataGame/score.txt"
 const MAX_SCORES = 8 
 
-# Método llamado cuando el nodo está listo
-# Obtiene la puntuación del jugador y actualiza el HUD
+# Método _ready: Inicializa el puntaje del jugador y actualiza la visualización
 func _ready():
-	player_score = GameData.coins  # Obtiene el puntaje del jugador desde GameData
-	update_display()  # Actualiza el puntaje en pantalla
+	player_score = GameData.coins  # Obtiene el puntaje inicial basado en las monedas recogidas
+	update_display()
 
-# Actualiza el puntaje en el HUD
+# Actualiza el texto de la etiqueta de puntaje
 func update_display():
-	$ScoreLabel.text = "Score: " + str(player_score)
+	$ScoreLabel.text = "Score: " + str(player_score)  # Muestra el puntaje actual en la interfaz
 
-# Guarda la puntuación al presionar el botón de guardar
+# Evento que se activa al presionar el botón de guardar
 func _on_btnSave_pressed():
-	player_name = $NameInput.text  # Obtiene el nombre del jugador desde el campo de texto
+	player_name = $NameInput.text  # Captura el nombre ingresado
 	if player_name == "":
 		print("Debe ingresar un nombre para guardar el score")
-		return
-	save_score(player_name, player_score)  # Guarda el puntaje
-	get_tree().change_scene("res://Scenes/Menu/Main_Menu.tscn")  # Cambia a la escena del menú principal
+		return  # No continúa si el nombre está vacío
 
-# Guarda el puntaje en el archivo
-func save_score(name: String, score: int):
+	# Guarda el puntaje y regresa al menú principal
+	save_score(player_name, player_score)
+	get_tree().change_scene("res://Scenes/Menu/Main_Menu.tscn")
+
+# Guarda el puntaje del jugador en el archivo
+func save_score(name, score):
 	var scores = load_scores()  # Carga los puntajes actuales
 	scores.append({"name": name, "score": score})  # Añade el nuevo puntaje
-	scores.sort_custom(self, "compare_scores")  # Ordena los puntajes de mayor a menor
+
+	# Ordena los puntajes de mayor a menor y mantiene solo los mejores puntajes
+	scores.sort_custom(self, "get_best_score")
 	if scores.size() > MAX_SCORES:
-		scores = scores.slice(0, MAX_SCORES)  # Mantiene solo los MAX_SCORES puntajes más altos
-	
-	# Guarda el array de puntajes en el archivo como JSON
+		scores = scores.slice(0, MAX_SCORES)
+
+	# Guarda los puntajes en formato JSON
 	var file = File.new()
 	file.open(SCORE_FILE_PATH, File.WRITE)
-	file.store_string(to_json(scores))  # Guarda el array en formato JSON
+	file.store_string(to_json(scores))  # Almacena el JSON de los puntajes en el archivo
 	file.close()
 
-# Carga los puntajes desde el archivo y los devuelve como un array de diccionarios
-func load_scores() -> Array:
+# Carga los puntajes desde el archivo
+func load_scores():
 	var file = File.new()
-	if file.file_exists(SCORE_FILE_PATH):
+	if file.file_exists(SCORE_FILE_PATH):  # Verifica si el archivo existe
 		file.open(SCORE_FILE_PATH, File.READ)
 		var data = file.get_as_text()
 		file.close()
-		# Si el archivo está vacío o el contenido es incorrecto, retorna un array vacío
-		if data.strip_edges() == "":
-			return []
-		var scores = parse_json(data)
-		if typeof(scores) == TYPE_ARRAY:
-			return scores  # Retorna el array de puntajes si el archivo tenía datos válidos
-	return []  # Retorna una lista vacía si el archivo no existe o está vacío
+		return parse_json(data)  # Retorna los puntajes como una lista de diccionarios
+	return []  # Retorna una lista vacía si no hay puntajes guardados
 
-# Función de comparación para ordenar puntajes de mayor a menor
-func compare_scores(a: Dictionary, b: Dictionary) -> int:
-	return b["score"] - a["score"]  # Retorna la diferencia entre los puntajes para ordenar
-
-# Devuelve el puntaje más alto en el archivo
-func get_best_score() -> int:
-	var scores = load_scores()
-	if scores.size() > 0:
-		return scores[0]["score"]  # El puntaje más alto es el primer elemento tras ordenar
-	return 0
+# Obtiene el mejor puntaje registrado en la lista
+func get_best_score():
+	var scores = load_scores()  # Carga los puntajes
+	var best_score = 0
+	for score_entry in scores:
+		if score_entry["score"] > best_score:
+			best_score = score_entry["score"]  # Actualiza el mejor puntaje si encuentra uno mayor
+	return best_score  # Devuelve el mejor puntaje encontrado

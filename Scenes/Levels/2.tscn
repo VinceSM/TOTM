@@ -156,6 +156,7 @@ tile_data = PoolIntArray( 0, 1, 0, 1, 0, 0, 2, 1, 0, 3, 0, 0, 4, 1, 0, 5, 0, 0, 
 [node name="HUD" parent="." instance=ExtResource( 5 )]
 scale = Vector2( 0.5, 0.5 )
 transform = Transform2D( 0.5, 0, 0, 0.5, 0, 0 )
+time_left = 25
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
 position = Vector2( 179, 167 )

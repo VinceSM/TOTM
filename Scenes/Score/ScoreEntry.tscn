@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Assets/Fonts/BKShatteredScore.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Scripts/Score/ScoreEntry.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Fonts/KiriFont.otf" type="DynamicFontData" id=3]
 
 [sub_resource type="StyleBoxFlat" id=4]
 bg_color = Color( 0.0686969, 0.64198, 0.874023, 0.494118 )
@@ -11,8 +12,8 @@ size = 33
 font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 33
-font_data = ExtResource( 1 )
+size = 23
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 33
@@ -42,6 +43,7 @@ margin_right = -12.0
 margin_bottom = 16.0
 custom_fonts/font = SubResource( 2 )
 text = "NAME"
+valign = 1
 
 [node name="Score" type="Label" parent="."]
 anchor_left = 1.0

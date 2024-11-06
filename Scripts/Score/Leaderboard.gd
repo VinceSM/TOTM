@@ -1,79 +1,70 @@
 extends Node
 
-# Ruta del archivo donde se guardan los puntajes de los jugadores
-const SCORE_FILE_PATH = "res://DataGame/score.txt"
-# Ruta de la escena que representa cada entrada de puntaje en el leaderboard
-const SCORE_ENTRY_SCENE_PATH = "res://Scenes/Score/ScoreEntry.tscn"
-# Máximo número de puntajes a mostrar en el leaderboard
-const MAX_SCORES = 8
+# Constantes
+const SCORE_FILE_PATH = "res://DataGame/score.txt" # Ruta del archivo donde se guardan los puntajes.
+const SCORE_ENTRY_SCENE_PATH = "res://Scenes/Score/ScoreEntry.tscn" # Ruta de la escena de cada entrada de puntaje.
+const MAX_SCORES = 8 # Número máximo de puntajes que se mostrarán.
 
-# Método llamado cuando el nodo está listo. Carga y muestra los puntajes al iniciar.
+# Método que se ejecuta cuando el nodo está listo. Carga y muestra los puntajes al iniciar.
 func _ready():
 	load_and_display_scores()
 
-# Carga los puntajes del archivo y los muestra en el leaderboard
+# Carga los puntajes del archivo, los ordena de mayor a menor y los muestra en la interfaz.
 func load_and_display_scores():
-	var scores = load_scores()  # Carga los puntajes del archivo
+	var scores = load_scores()
 	
-	# Itera sobre cada puntaje y lo añade a la lista del leaderboard
-	for i in range(scores.size()):
+	# Ordenamos los puntajes de mayor a menor
+	scores.sort_custom(self, "sort_scores_descending")
+	
+	# Limpiamos los puntajes existentes antes de mostrar los nuevos
+	for child in $Panel/VBoxContainer.get_children():
+		child.queue_free()
+	
+	# Mostramos los puntajes ordenados, hasta el número máximo de puntajes permitidos
+	for i in range(min(scores.size(), MAX_SCORES)):
 		var entry = scores[i]
 		add_score_to_list(i + 1, entry["name"], entry["score"])
 
-# Instancia y configura un ScoreEntry en el leaderboard
-# @param position: La posición del puntaje en el leaderboard (1, 2, 3, etc.)
-# @param name: Nombre del jugador
-# @param score: Puntaje del jugador
+# Añade un puntaje específico a la lista de la interfaz, en la posición correspondiente
+# @param position La posición del puntaje en el leaderboard (1, 2, 3, etc.)
+# @param name Nombre del jugador
+# @param score Puntaje del jugador
 func add_score_to_list(position: int, name: String, score: int):
-	var score_entry_scene = load(SCORE_ENTRY_SCENE_PATH)
+	var score_entry_scene = load(SCORE_ENTRY_SCENE_PATH) 
 	if not score_entry_scene:
 		print("Error: No se encontró la escena ScoreEntry.")
 		return
 	
-	# Instancia la escena ScoreEntry y configura su información
 	var score_entry = score_entry_scene.instance()
 	score_entry.setPosition(position)
 	score_entry.setNamePlayer(name)
 	score_entry.setScore(score)
 	
-	# Agrega la entrada de puntaje configurada al VBoxContainer para que se muestre en el leaderboard
 	$Panel/VBoxContainer.add_child(score_entry)
 
-# Carga los puntajes almacenados en el archivo y los devuelve como una lista ordenada
-# @return Devuelve una lista de puntajes, ordenados de mayor a menor y limitados al número máximo de puntajes.
-func load_scores() -> Array:
-	var file = File.new()
-	var scores = []
+# Carga los puntajes almacenados en el archivo y los devuelve como una lista.
+# Si el archivo está vacío o mal formateado, muestra un mensaje de error.
+# @return Lista de puntajes
+func load_scores():
+	var file = File.new() 
+	var scores = []  
 	
-	if file.file_exists(SCORE_FILE_PATH):
+	if file.file_exists(SCORE_FILE_PATH): 
 		file.open(SCORE_FILE_PATH, File.READ)
-		var data = file.get_as_text()
+		var data = file.get_as_text()  
 		file.close()
 		
-		# Si el archivo está vacío o los datos no son válidos, retorna una lista vacía
-		if data.strip_edges() == "":
-			return []
 		var parsed_data = parse_json(data)
 		if typeof(parsed_data) == TYPE_ARRAY:
-			scores = parsed_data  # Utiliza los datos válidos
+			scores = parsed_data
 		else:
-			print("Error: Datos de puntaje no válidos en el archivo")
-	
-	# Ordena la lista de puntajes de mayor a menor
-	scores.sort_custom(self, "get_best_score")
-	if scores.size() > MAX_SCORES:
-		scores = scores.slice(0, MAX_SCORES)
+			print("Error: El archivo de puntajes está vacío o mal formateado.")
 	
 	return scores
 
-# Obtiene el puntaje más alto de la lista de puntajes
-# @return Devuelve el puntaje más alto
-func get_best_score():
-	var scores = load_scores()
-	var best_score = 0
-	
-	# Itera sobre cada entrada de puntaje y verifica si es el más alto
-	for score_entry in scores:
-		if score_entry["score"] > best_score:
-			best_score = score_entry["score"]
-	return best_score
+# Función de comparación para ordenar los puntajes de mayor a menor
+# @param a Primer elemento de puntaje
+# @param b Segundo elemento de puntaje
+# @return true si a es mayor que b
+func sort_scores_descending(a, b):
+	return a["score"] > b["score"]
