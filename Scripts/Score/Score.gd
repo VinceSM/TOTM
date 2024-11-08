@@ -27,6 +27,7 @@ func _on_btnSave_pressed():
 	# Guarda el puntaje y regresa al menú principal
 	save_score(player_name, player_score)
 	get_tree().change_scene("res://Scenes/Menu/Main_Menu.tscn")
+	GameData.reset_data()
 
 # Guarda el puntaje del jugador en el archivo
 func save_score(name, score):
