@@ -28,6 +28,7 @@ config/icon="res://icon.png"
 
 GameData="*res://Scripts/Singleton/GameData.gd"
 Levels="*res://Scripts/Singleton/Levels.gd"
+ScoreManager="*res://Scripts/Singleton/ScoreManager.gd"
 
 [display]
 
