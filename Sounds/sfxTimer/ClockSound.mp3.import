@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ClockSound.mp3-88658845d3ddc3b684d0f8d1f53bde28.mp3str"
+
+[deps]
+
+source_file="res://Sounds/sfxTimer/ClockSound.mp3"
+dest_files=[ "res://.import/ClockSound.mp3-88658845d3ddc3b684d0f8d1f53bde28.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

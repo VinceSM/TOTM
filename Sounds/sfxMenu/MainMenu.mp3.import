@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/MainMenu.mp3-28c6a9ce175bc3cd50151fcefa4687ea.mp3str"
+
+[deps]
+
+source_file="res://Sounds/sfxMenu/MainMenu.mp3"
+dest_files=[ "res://.import/MainMenu.mp3-28c6a9ce175bc3cd50151fcefa4687ea.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

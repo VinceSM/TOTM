@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Control",
 "class": "PauseMenu",
 "language": "GDScript",
-"path": "res://Scripts/Menu/Pause_Menu.gd"
+"path": "res://Menu/Pause_Menu.gd"
 } ]
 _global_script_class_icons={
 "PauseMenu": ""
@@ -21,14 +21,14 @@ _global_script_class_icons={
 [application]
 
 config/name="TOTM"
-run/main_scene="res://Scenes/Menu/Main_Menu.tscn"
+run/main_scene="res://Menu/Main_Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-GameData="*res://Scripts/Singleton/GameData.gd"
-Levels="*res://Scripts/Singleton/Levels.gd"
-ScoreManager="*res://Scripts/Singleton/ScoreManager.gd"
+Levels="*res://Levels/Levels.gd"
+GameData="*res://HUD/GameData.gd"
+ScoreManager="*res://Score/ScoreManager.gd"
 
 [display]
 
