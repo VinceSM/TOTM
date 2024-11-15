@@ -29,6 +29,7 @@ config/icon="res://icon.png"
 Levels="*res://Levels/Levels.gd"
 GameData="*res://HUD/GameData.gd"
 ScoreManager="*res://Score/ScoreManager.gd"
+CollectibleBehavior="*res://HUD/CollectibleBehavior.gd"
 
 [display]
 
