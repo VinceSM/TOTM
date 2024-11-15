@@ -30,6 +30,7 @@ Levels="*res://Levels/Levels.gd"
 GameData="*res://HUD/GameData.gd"
 ScoreManager="*res://Score/ScoreManager.gd"
 CollectibleBehavior="*res://HUD/CollectibleBehavior.gd"
+GameManager="*res://HUD/GameManager.gd"
 
 [display]
 

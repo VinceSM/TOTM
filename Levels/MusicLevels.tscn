@@ -3,7 +3,6 @@
 [ext_resource path="res://Sounds/sfxLevels/LevelSong.mp3" type="AudioStream" id=1]
 [ext_resource path="res://Levels/MusicLevels.gd" type="Script" id=2]
 
-
 [node name="LevelsSound" type="Node2D"]
 script = ExtResource( 2 )
 
