@@ -27,7 +27,7 @@ animations = [ {
 [sub_resource type="CapsuleShape2D" id=2]
 height = 36.0
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=["Player"]]
 position = Vector2( -1, 1 )
 script = ExtResource( 2 )
 

@@ -10,7 +10,6 @@ func _on_Spike_body_entered(body):
 		
 		# Llama a la función de muerte del jugador
 		body.die()
-		
 		# Reinicia el juego después de la colisión
 		_restart_game()
 

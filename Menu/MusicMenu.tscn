@@ -3,7 +3,6 @@
 [ext_resource path="res://Sounds/sfxMenu/MainMenu.mp3" type="AudioStream" id=1]
 [ext_resource path="res://Menu/MusicMenu.gd" type="Script" id=2]
 
-
 [node name="MenuSound" type="Node2D"]
 script = ExtResource( 2 )
 
