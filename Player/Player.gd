@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 onready var player = $AnimatedSprite
-onready var movimiento = MovementManager
+onready var movimiento = MovementManagerPlayer
 onready var game_manager = GameManager
 
 var screen_size
