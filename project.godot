@@ -27,11 +27,10 @@ config/icon="res://icon.png"
 [autoload]
 
 Levels="*res://Levels/Levels.gd"
-GameData="*res://Singletons/GameData.gd"
 ScoreManager="*res://Score/ScoreManager.gd"
 CollectibleBehavior="*res://Singletons/CollectibleBehavior.gd"
 GameManager="*res://Singletons/GameManager.gd"
-MovementManagerPlayer="*res://Singletons/MovementManagerPlayer.gd"
+MovementManager="*res://Singletons/MovementManager.gd"
 
 [display]
 

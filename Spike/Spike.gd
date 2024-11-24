@@ -15,4 +15,4 @@ func _on_Spike_body_entered(body):
 
 # Reinicia el juego y restablece los datos
 func _restart_game():	
-	GameData.reset_data()  # Restablece los datos del juego (puntaje, objetos recolectados, etc.)
+	GameManager.reset_data()  # Restablece los datos del juego (puntaje, objetos recolectados, etc.)

@@ -25,6 +25,6 @@ func reset_pause_state():
 # Método para manejar la transición al menú principal
 # Restablece los datos de juego y cambia la escena al menú principal.
 func _on_Main_Menu_pressed():
-	GameData.reset_data() 
+	GameManager.reset_data() 
 	get_tree().paused = false  
 	get_tree().change_scene("res://Menu/Main_Menu.tscn")

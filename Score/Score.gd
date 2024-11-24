@@ -5,7 +5,7 @@ var player_name = ""
 var player_score = 0
 
 func _ready():
-	player_score = GameData.coins
+	player_score = GameManager.coins
 	update_display()
 
 func update_display():
@@ -19,7 +19,7 @@ func _on_btnSave_pressed():
 
 	save_score(player_name, player_score)
 	get_tree().change_scene("res://Menu/Main_Menu.tscn")
-	GameData.reset_data()
+	GameManager.reset_data()
 
 func save_score(name, score):
 	var scores = ScoreManager.load_scores()
