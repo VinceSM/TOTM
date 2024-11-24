@@ -56,6 +56,7 @@ animations = [ {
 height = 36.0
 
 [node name="Player" type="KinematicBody2D" groups=["Player"]]
+pause_mode = 1
 position = Vector2( -1, 1 )
 script = ExtResource( 2 )
 
