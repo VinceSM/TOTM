@@ -4,7 +4,6 @@
 [ext_resource path="res://Portal/Portal.gd" type="Script" id=2]
 [ext_resource path="res://Sounds/sfxPortal/portal.mp3" type="AudioStream" id=3]
 
-
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 7, 18 )
 
@@ -22,7 +21,7 @@ shape = SubResource( 1 )
 
 [node name="SongPortal" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-volume_db = 1.0
+volume_db = -6.0
 pitch_scale = 1.5
 
 [connection signal="body_entered" from="." to="." method="_on_Portal_body_entered"]

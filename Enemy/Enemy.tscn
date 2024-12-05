@@ -64,8 +64,7 @@ light_mask = 512
 position = Vector2( -1, -2.00001 )
 scale = Vector2( 0.104082, 0.104082 )
 frames = SubResource( 1 )
-animation = "walk"
-frame = 2
+animation = "attack"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )

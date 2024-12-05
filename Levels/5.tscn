@@ -6,7 +6,6 @@
 [ext_resource path="res://Menu/MusicMenu.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Assets/Fonts/KiriFont.otf" type="DynamicFontData" id=5]
 
-
 [sub_resource type="DynamicFont" id=1]
 size = 40
 font_data = ExtResource( 2 )
@@ -54,7 +53,7 @@ custom_fonts/font = SubResource( 4 )
 custom_styles/normal = SubResource( 5 )
 text = "CONGRATULATIONS!!
 
-You have walked the ancient halls of the temples, defying time and gravity. 
+You have walked the ancient halls of the temples, defying obstacles
 Each coin you have obtained represents an ancestral legacy, and now... the power of the TOTEMS is yours.
 
 Humanity once again faces a new dawn, thanks to you. The clock has stopped ticking, but your legend is just beginning...

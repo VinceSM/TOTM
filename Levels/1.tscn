@@ -14,7 +14,7 @@
 [ext_resource path="res://Enemy/Enemy.tscn" type="PackedScene" id=12]
 
 [sub_resource type="DynamicFont" id=6]
-size = 17
+size = 15
 font_data = ExtResource( 9 )
 
 [sub_resource type="StyleBoxFlat" id=8]
@@ -100,23 +100,23 @@ scale = Vector2( 2, 2 )
 tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65543, 0, 0, 65544, 0, 0, 65551, 0, 0, 131072, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131079, 0, 0, 131080, 0, 0, 131087, 0, 0, 196608, 0, 0, 196615, 0, 0, 196616, 0, 0, 196619, 0, 0, 196620, 0, 0, 196621, 0, 0, 196622, 0, 0, 196623, 0, 0, 262144, 0, 0, 262159, 0, 0, 327680, 0, 0, 327695, 0, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393223, 0, 0, 393224, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458759, 0, 0, 458760, 0, 0, 458767, 0, 0, 524288, 0, 0, 524295, 0, 0, 524296, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
 
 [node name="Warning" type="Label" parent="."]
-margin_left = 104.0
-margin_top = 4.0
-margin_right = 361.0
-margin_bottom = 55.0
+margin_left = 137.0
+margin_top = 2.0
+margin_right = 407.0
+margin_bottom = 63.0
 custom_fonts/font = SubResource( 6 )
 custom_styles/normal = SubResource( 8 )
-text = "CAREFUL! THE PEAKS 
+text = "THE PEAKS AND MINOTAUR
 THEY COULD KILL YOU"
 align = 1
 valign = 1
 uppercase = true
 
 [node name="Warning2" type="Label" parent="."]
-margin_left = 394.0
-margin_top = 4.0
-margin_right = 651.0
-margin_bottom = 55.0
+margin_left = 666.0
+margin_top = 2.0
+margin_right = 936.0
+margin_bottom = 63.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 6 )
 custom_styles/normal = SubResource( 9 )
@@ -136,7 +136,7 @@ position = Vector2( 132, 113 )
 scale = Vector2( 0.7, 0.7 )
 
 [node name="Enemy" parent="." instance=ExtResource( 12 )]
-position = Vector2( 319, 560 )
+position = Vector2( 93, 559 )
 
 [node name="Coins" type="Node2D" parent="."]
 

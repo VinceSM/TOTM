@@ -22,6 +22,6 @@ shape = SubResource( 1 )
 
 [node name="sfxCoinCollected" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
-volume_db = 1.0
+volume_db = -6.0
 
 [connection signal="body_entered" from="." to="." method="_on_Coin_body_entered"]
