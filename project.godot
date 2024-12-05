@@ -31,6 +31,7 @@ ScoreManager="*res://Score/ScoreManager.gd"
 CollectibleBehavior="*res://Singletons/CollectibleBehavior.gd"
 GameManager="*res://Singletons/GameManager.gd"
 MovementManager="*res://Singletons/MovementManager.gd"
+ChangeScene="*res://Singletons/ChangeScene.gd"
 
 [display]
 

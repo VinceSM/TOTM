@@ -24,12 +24,12 @@ func _physics_process(delta):
 		patrol(delta)
 
 # Función para manejar el comportamiento de patrulla del enemigo
-func patrol(delta):
+func patrol(_delta):
 	# Establecer la velocidad basada en la dirección actual y la velocidad
 	var velocity = Vector2(enemy_speed * direction, 0)
 	
 	# Mover el enemigo y obtener la información de colisión
-	var collision = move_and_slide(velocity, Vector2.UP)
+	var _collision = move_and_slide(velocity, Vector2.UP)
 	
 	# Verificar colisión con paredes
 	if is_on_wall():

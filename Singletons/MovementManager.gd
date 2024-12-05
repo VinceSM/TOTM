@@ -11,7 +11,7 @@ var is_on_ceiling = false  # Indica si el jugador está en el techo
 var is_on_ground = false  # Indica si el jugador está en el suelo
 
 # Función principal de movimiento
-func move(entity, delta, is_enemy = false):
+func move(entity, _delta, is_enemy = false):
 	if is_enemy:
 		return move_enemy(entity)
 	else:

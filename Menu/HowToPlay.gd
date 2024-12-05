@@ -2,4 +2,4 @@ extends Node
 
 
 func _on_PlayBtn_pressed():
-	get_tree().change_scene("res://Levels/1.tscn")
+	ChangeScene.change_scene("res://Levels/1.tscn")

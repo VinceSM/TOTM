@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Assets/Fonts/Montreal-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Menu/HowToPlay.gd" type="Script" id=2]
@@ -10,7 +10,7 @@
 [ext_resource path="res://Assets/AssetsHowToPlay/flechasControlesUp.png" type="Texture" id=8]
 [ext_resource path="res://Menu/MusicMenu.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Assets/Fonts/KiriFont.otf" type="DynamicFontData" id=10]
-
+[ext_resource path="res://Enemy/AnimatedSprite/Minotaur_02_Idle_000.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=6]
 size = 50
@@ -27,9 +27,11 @@ size = 20
 font_data = ExtResource( 10 )
 
 [sub_resource type="DynamicFont" id=3]
+size = 12
 font_data = ExtResource( 10 )
 
 [sub_resource type="DynamicFont" id=5]
+size = 12
 font_data = ExtResource( 10 )
 
 [node name="HowToPlay" type="Node"]
@@ -38,7 +40,7 @@ script = ExtResource( 2 )
 [node name="MenuSound" parent="." instance=ExtResource( 9 )]
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 514.5, 305 )
+position = Vector2( 510, 309 )
 scale = Vector2( 0.545312, 0.587987 )
 texture = ExtResource( 6 )
 
@@ -94,9 +96,9 @@ valign = 1
 
 [node name="Label" type="Label" parent="CollectPortal"]
 margin_left = 25.0
-margin_top = 14.0
-margin_right = 319.0
-margin_bottom = 64.0
+margin_top = 16.0
+margin_right = 244.0
+margin_bottom = 59.0
 rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/font = SubResource( 3 )
 text = "collect the portal to 
@@ -105,17 +107,17 @@ align = 1
 valign = 1
 
 [node name="Sprite" type="Sprite" parent="CollectPortal"]
-position = Vector2( 242, 202 )
-scale = Vector2( 0.2, 0.2 )
+position = Vector2( 188.5, 180 )
+scale = Vector2( 0.133036, 0.122321 )
 texture = ExtResource( 5 )
 
 [node name="CollectCoin" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="CollectCoin"]
-margin_left = 585.0
-margin_top = 310.0
-margin_right = 835.0
-margin_bottom = 360.0
+margin_left = 696.0
+margin_top = 16.0
+margin_right = 884.0
+margin_bottom = 63.0
 rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/font = SubResource( 5 )
 text = "collect coins to have 
@@ -124,17 +126,17 @@ align = 1
 valign = 1
 
 [node name="Sprite" type="Sprite" parent="CollectCoin"]
-position = Vector2( 776, 472 )
-scale = Vector2( 0.2, 0.2 )
+position = Vector2( 833, 180 )
+scale = Vector2( 0.128571, 0.133036 )
 texture = ExtResource( 4 )
 
 [node name="TimeGame" type="CanvasLayer" parent="."]
 
 [node name="Label" type="Label" parent="TimeGame"]
-margin_left = 590.0
-margin_top = 27.0
-margin_right = 840.0
-margin_bottom = 78.0
+margin_left = 371.0
+margin_top = 16.0
+margin_right = 568.0
+margin_bottom = 60.0
 rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/font = SubResource( 5 )
 text = "Shows 
@@ -143,8 +145,27 @@ align = 1
 valign = 1
 
 [node name="Sprite" type="Sprite" parent="TimeGame"]
-position = Vector2( 772, 198 )
-scale = Vector2( 0.0405, 0.04175 )
+position = Vector2( 520, 180 )
+scale = Vector2( 0.0325, 0.034125 )
 texture = ExtResource( 7 )
+
+[node name="Enemy" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="Enemy"]
+margin_left = 624.0
+margin_top = 314.0
+margin_right = 894.0
+margin_bottom = 361.0
+rect_scale = Vector2( 1.5, 1.5 )
+custom_fonts/font = SubResource( 5 )
+text = "avoid the minotaur 
+so they don't kill you"
+align = 1
+valign = 1
+
+[node name="Sprite" type="Sprite" parent="Enemy"]
+position = Vector2( 824, 466 )
+scale = Vector2( 0.243056, 0.32449 )
+texture = ExtResource( 11 )
 
 [connection signal="pressed" from="PlayBtn" to="." method="_on_PlayBtn_pressed"]
