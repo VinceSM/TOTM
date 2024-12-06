@@ -35,7 +35,7 @@ func update_hud():
 # Función para reiniciar el juego
 func restart_game():
 	reset_data()
-	ChangeScene.change_scene("res://Levels/1.tscn")
+	get_tree().change_scene("res://Levels/1.tscn")
 
 # Función para obtener el nodo HUD
 func get_hud():

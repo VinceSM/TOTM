@@ -17,4 +17,4 @@ func advance_to_next_level() -> void:
 	var next_level = get_parent().get_next_level()
 	
 	# Cambia la escena al siguiente nivel
-	ChangeScene.change_scene("res://Levels/" + str(next_level) + ".tscn")
+	get_tree().change_scene("res://Levels/" + str(next_level) + ".tscn")

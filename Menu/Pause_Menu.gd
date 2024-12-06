@@ -28,4 +28,4 @@ func reset_pause_state():
 func _on_Main_Menu_pressed():
 	GameManager.reset_data() 
 	get_tree().paused = false  
-	ChangeScene.change_scene("res://Menu/Main_Menu.tscn")
+	get_tree().change_scene("res://Menu/Main_Menu.tscn")
