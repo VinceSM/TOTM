@@ -8,6 +8,7 @@ onready var game_manager = GameManager
 var screen_size
 var is_dead = false
 var is_in_process = false
+var can_move = true  
 
 # Inicializa el jugador
 func _ready():
@@ -31,9 +32,16 @@ func _process(delta):
 	if not is_dead and not get_tree().paused:
 		process_movement(delta)
 
-# Procesa el movimiento del jugador
 func process_movement(delta):
-	movement_manager.move(self, delta)
+	if can_move:
+		movement_manager.move(self, delta)  # Solo permite movimiento si can_move es true
+
+func disable_movement():
+	can_move = false
+	stop_player_animation()  # Detener la animación del jugador cuando no puede moverse
+
+func enable_movement():
+	can_move = true
 
 # Obtiene la altura del sprite animado del jugador
 func get_animated_sprite_height():

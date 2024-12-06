@@ -88,7 +88,7 @@ func _on_KillArea_body_entered(body):
 	# Verifica si el cuerpo que entró es el jugador
 	if body.name == "Player":
 		# Detiene el movimiento del jugador
-		body.stop_player_animation()
+		body.disable_movement()
 		# Guarda una referencia al jugador
 		player_body = body  
 		# Cambia el estado del enemigo a atacar
