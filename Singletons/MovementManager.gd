@@ -81,3 +81,8 @@ func set_velocity(new_speed: Vector2):
 func get_velocity() -> Vector2:
 	return speed
 
+# Función para actualizar el movimiento del enemigo según su estado
+func move_enemy_with_direction(entity, _speed, direction):
+	var velocity = Vector2(_speed * direction, 0)
+	return entity.move_and_slide(velocity, Vector2.UP)
+
