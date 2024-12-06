@@ -1,3 +1,4 @@
+# GameManager.gd
 extends Node
 
 # Variables que antes estaban en GameData

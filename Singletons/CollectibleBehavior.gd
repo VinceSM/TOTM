@@ -1,3 +1,4 @@
+# CollectibleBehavior.gd
 extends Node
 
 # Maneja la recolección de un objeto coleccionable

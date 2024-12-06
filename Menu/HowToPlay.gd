@@ -1,3 +1,4 @@
+# HowToPlay.gd
 extends Node
 
 func _on_PlayBtn_pressed():

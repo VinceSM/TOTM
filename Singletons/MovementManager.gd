@@ -1,3 +1,4 @@
+# MovementManager.gd
 extends Node
 
 # Variables para el movimiento

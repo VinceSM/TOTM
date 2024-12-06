@@ -1,10 +1,14 @@
+#ScoreEntry.gd
 extends Panel
 
-func setPosition(position: int):
+# Establece la posición del jugador en el panel
+func setPosition(position: int) -> void:
 	$Position.text = str(position)
 
-func setNamePlayer(NamePlayer: String):
-	$NamePlayer.text = NamePlayer
+# Establece el nombre del jugador en el panel
+func setNamePlayer(namePlayer: String) -> void:
+	$NamePlayer.text = namePlayer
 
-func setScore(score: int):
+# Establece la puntuación del jugador en el panel
+func setScore(score: int) -> void:
 	$Score.text = str(score)

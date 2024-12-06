@@ -1,3 +1,4 @@
+#Player.gd
 extends KinematicBody2D
 
 onready var player = $AnimatedSprite

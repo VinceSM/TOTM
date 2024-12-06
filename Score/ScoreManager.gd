@@ -1,9 +1,14 @@
+#ScoreManager.gd
 extends Node
 
+# Ruta del archivo que almacena las puntuaciones
 const SCORE_FILE_PATH = "res://DataGame/score.txt"
+
+# Número máximo de puntuaciones que se almacenan
 const MAX_SCORES = 8
 
-static func load_scores():
+# Carga las puntuaciones desde el archivo
+static func load_scores() -> Array:
 	var file = File.new()
 	var scores = []
 	
@@ -20,7 +25,8 @@ static func load_scores():
 	
 	return scores
 
-static func save_scores(scores):
+# Guarda las puntuaciones en el archivo
+static func save_scores(scores: Array) -> void:
 	scores.sort_custom(ScoreManager, "sort_scores_descending")
 	if scores.size() > MAX_SCORES:
 		scores = scores.slice(0, MAX_SCORES)
@@ -30,10 +36,12 @@ static func save_scores(scores):
 	file.store_string(to_json(scores))
 	file.close()
 
-static func sort_scores_descending(a, b):
+# Función de comparación para ordenar las puntuaciones en orden descendente
+static func sort_scores_descending(a: Dictionary, b: Dictionary) -> bool:
 	return a["score"] > b["score"]
 
-static func get_best_score():
+# Obtiene la mejor puntuación
+static func get_best_score() -> int:
 	var scores = load_scores()
 	var best_score = 0
 	for score_entry in scores:
