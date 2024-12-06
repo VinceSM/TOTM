@@ -5,9 +5,8 @@ extends KinematicBody2D
 onready var sprite = $AnimatedSprite
 onready var kill_area = $RayCast2D/KillArea 
 onready var ray_cast = $RayCast2D
-onready var attack_timer = $AttackTimer 
-onready var attack_sound = $attackSound  
-onready var dead_sound = $deadSound 
+onready var attack_timer = $AttackTimer  
+onready var dead_sound = $Death/DeathSound
 
 # Velocidad y distancia de ataque del enemigo
 export var enemy_speed = 100
@@ -21,12 +20,11 @@ enum State {
 
 # Estado actual del enemigo
 var current_state = State.PATROL
-
 # Dirección del enemigo
 var direction = 1
 
 # Referencia al jugador
-var player_body = null  
+var player_body = null
 
 func _ready():
 	# Configura la máscara de colisión
@@ -70,11 +68,8 @@ func directionKillArea():
 		if shape is RectangleShape2D:
 			shape.extents.x = distance / 2  
 
-func patrol(delta):
-	# Mueve al enemigo en la dirección actual
-	var velocity = Vector2(enemy_speed * direction, 0)
-	move_and_slide(velocity, Vector2.UP)
-
+func patrol(_delta):
+	MovementManager.move_enemy_with_direction(self, enemy_speed, direction)
 	# Cambia la dirección si el enemigo choca con una pared
 	if is_on_wall():
 		direction *= -1
@@ -92,22 +87,24 @@ func update_animation(anim_name):
 func _on_KillArea_body_entered(body):
 	# Verifica si el cuerpo que entró es el jugador
 	if body.name == "Player":
+		# Detiene el movimiento del jugador
+		body.stop_player_animation()
 		# Guarda una referencia al jugador
 		player_body = body  
 		# Cambia el estado del enemigo a atacar
 		current_state = State.ATTACK
 		# Ataca al jugador
-		attack() 
+		attack()
 
 func attack():
 	# Detiene el movimiento del enemigo
 	move_and_slide(Vector2.ZERO)  
 	# Actualiza la animación del enemigo
 	update_animation("attack") 
-	# Reproduce el sonido de ataque
-	attack_sound.play()
 	# Inicia el temporizador de ataque
 	attack_timer.start()
+	if attack_timer:
+		$attackSound.play()
 
 func _on_AttackTimer_timeout():
 	# Llama a la función _on_attack_finished cuando el temporizador de ataque termine

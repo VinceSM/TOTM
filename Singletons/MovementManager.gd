@@ -6,6 +6,7 @@ var speed = Vector2()  # Velocidad actual
 var horizontal_speed = 300  # Velocidad horizontal
 var vertical_speed = 400  # Velocidad vertical
 var fall_limit = 2000  # Límite de caída
+var _entity
 
 # Variables de estado
 var is_on_ceiling = false  # Indica si el jugador está en el techo

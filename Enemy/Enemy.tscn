@@ -33,7 +33,7 @@
 [ext_resource path="res://Enemy/AnimatedSprite/Walking/Minotaur_02_Walking_010.png" type="Texture" id=31]
 [ext_resource path="res://Enemy/AnimatedSprite/Walking/Minotaur_02_Walking_006.png" type="Texture" id=32]
 [ext_resource path="res://Sounds/sfxEnemy/soundAttackEnemy.mp3" type="AudioStream" id=33]
-[ext_resource path="res://Sounds/sfxDead/deadPlayer.mp3" type="AudioStream" id=34]
+[ext_resource path="res://Player/DeathSound.tscn" type="PackedScene" id=34]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -57,7 +57,7 @@ animations = [ {
 height = 16.0
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 28, 10 )
+extents = Vector2( 26.5, 10 )
 
 [node name="Enemy" type="KinematicBody2D"]
 pause_mode = 1
@@ -80,19 +80,18 @@ cast_to = Vector2( 50, 0 )
 [node name="KillArea" type="Area2D" parent="RayCast2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RayCast2D/KillArea"]
-position = Vector2( 19, -1 )
+position = Vector2( 3.5, -1 )
 shape = SubResource( 3 )
-
-[node name="deadSound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 34 )
 
 [node name="attackSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 33 )
-volume_db = 6.0
+volume_db = 12.0
 pitch_scale = 1.5
 
 [node name="AttackTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="Death" parent="." instance=ExtResource( 34 )]
 
 [connection signal="body_entered" from="RayCast2D/KillArea" to="." method="_on_KillArea_body_entered"]
 [connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]

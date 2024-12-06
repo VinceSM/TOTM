@@ -5,8 +5,8 @@ extends Area2D
 # entra en el área de colisión
 func _on_Spike_body_entered(body):
 	if body.get_name() == "Player":
-		$deadSound.pitch_scale = 1.5
-		$deadSound.play()
+		$Death/DeathSound.pitch_scale = 1.5
+		$Death/DeathSound.play()
 		body.die()
 		_restart_game()
 
