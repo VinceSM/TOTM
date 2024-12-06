@@ -18,7 +18,7 @@ func _on_btnSave_pressed():
 		return
 
 	save_score(player_name, player_score)
-	ChangeScene.change_scene("res://Menu/Main_Menu.tscn")
+	get_tree().change_scene("res://Menu/Main_Menu.tscn")
 	GameManager.reset_data()
 
 func save_score(name, score):
